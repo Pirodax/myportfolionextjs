@@ -14,3 +14,9 @@ https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-
 
 # liens dirrect vers le github 
 https://github.com/adrianhajdin/portfolio
+
+
+# liens vers les outils :
+
+## Aceternity UI
+https://ui.aceternity.com/

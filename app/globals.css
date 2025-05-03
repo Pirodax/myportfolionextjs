@@ -1,2 +1,9 @@
+
+/* app/globals.css */
 @import "tailwindcss";
+
+@theme {
+  --color-black: #000000;
+  --color-black-100: #000319;
+}
 
