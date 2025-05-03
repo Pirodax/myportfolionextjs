@@ -7,3 +7,10 @@ On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou 
 
 # Video tutoriel utilisé:
 https://www.youtube.com/watch?v=FTH6Dn3AyIQ
+
+
+# liens pour tous les contents:
+https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
+
+# liens dirrect vers le github 
+https://github.com/adrianhajdin/portfolio
