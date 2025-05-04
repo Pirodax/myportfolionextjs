@@ -45,7 +45,7 @@ https://ui.shadcn.com/docs/dark-mode/next
 
 
 # code global non fonctionnel mais avec un peu tout
- /* styles/globals.css */ 
+``` /* styles/globals.css */ 
 
 /* 1) Import unique : Preflight + Components + Utilities */
 @import "tailwindcss";
@@ -196,3 +196,4 @@ https://ui.shadcn.com/docs/dark-mode/next
   .fifth                  { animation: moveInCircle   20s ease infinite; }
   .scroll                 { animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite; }
 }
+```
