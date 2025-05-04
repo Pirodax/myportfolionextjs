@@ -7,3 +7,4 @@ export function cn(...inputs: ClassValue[]) {
 // for spotlines ui
 //for dot background
 //for text generate effect 
+//floating Navbar
