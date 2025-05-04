@@ -2,6 +2,10 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { cn } from "@/lib/utils";
 
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { TextGenerateEffectDemo } from './TextGenerateEffectDemo';
+ 
+
 const Hero = () => {
   return (
     <div className ="pb-20 pt-36">   
@@ -38,7 +42,7 @@ const Hero = () => {
                 <h2 className = "uppercase tracking-widest text-2xl font-bold text-center text-blue-100 max-w-80">
                    My Portfolio créé avec Next.js et Tailwind CSS
                 </h2>
-                
+                <TextGenerateEffectDemo/>
             </div>
 
         </div>
