@@ -23,6 +23,27 @@ https://ui.aceternity.com/
 
 
 
+# liens pour mode nuit et jour :
+https://ui.shadcn.com/docs/dark-mode/next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # code global non fonctionnel mais avec un peu tout
  /* styles/globals.css */ 
 

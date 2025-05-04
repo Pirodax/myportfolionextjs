@@ -5,3 +5,5 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 // for spotlines ui
+//for dot background
+//for text generate effect 
