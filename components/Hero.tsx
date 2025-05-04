@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { TextGenerateEffectDemo } from './TextGenerateEffectDemo';
+import MagicButton from './ui/MagicButton';
+import { FaLocationArrow } from 'react-icons/fa';
  
 
 const Hero = () => {
@@ -46,6 +48,15 @@ const Hero = () => {
                 <p className = "text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
                     hello, je suis Ludovic, un développeur web passionné par la création d'expériences numériques uniques.
                 </p>
+                <a href="about">
+                    <MagicButton
+                     title="Voir mon travail "
+                     icon={<FaLocationArrow/>}
+                     possition='rigth'
+
+                    />
+                </a>
+                
             </div>
 
         </div>

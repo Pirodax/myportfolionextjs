@@ -28,7 +28,8 @@ https://ui.shadcn.com/docs/dark-mode/next
 
 
 
-
+# liens pour react icons
+https://www.npmjs.com/package/react-icons
 
 
 
