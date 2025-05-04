@@ -42,7 +42,10 @@ const Hero = () => {
                 <h2 className = "uppercase tracking-widest text-2xl font-bold text-center text-blue-100 max-w-80">
                    My Portfolio créé avec Next.js et Tailwind CSS
                 </h2>
-                <TextGenerateEffectDemo/>
+                <TextGenerateEffectDemo/> {/* Text animation effect  qui se trouve dans components*/}
+                <p className = "text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
+                    hello, je suis Ludovic, un développeur web passionné par la création d'expériences numériques uniques.
+                </p>
             </div>
 
         </div>
