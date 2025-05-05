@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 
 21:46 sur 2:44:25 J1
 44:10 sur 2:44:25 J2
+53:31 sur 2:44:25 J3
 
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
@@ -23,6 +24,10 @@ https://github.com/adrianhajdin/portfolio
 ## Aceternity UI
 https://ui.aceternity.com/
 
+# CSS Gradient (dégrader de couleur generateur de code)
+https://cssgradient.io/
+# Convertiseur Hex to rgb
+http://www.proftnj.com/RGB3.htm
 
 
 # liens pour mode nuit et jour :

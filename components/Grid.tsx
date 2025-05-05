@@ -7,12 +7,17 @@ const Grid = () => {
   return (
     <section id="about">
       <BentoGrid>
-         {gridItems.map((item , idx) => ( //gidItems est un tableau d'objets possition: data/index.ts
+         {gridItems.map(({id, title , description, className , img , imgClassName, titleClassName, spareImg}) => ( //gidItems est un tableau d'objets possition: data/index.ts
             <BentoGridItem
-              id={item.id}
-              key={`${item.id}-${idx}`}
-              title={item.title}
-              description={item.description}
+              id={id}
+              key={id}
+              title={title}
+              description={description}
+              className={className} //size (widget) place and other
+              img={img} //img
+              imgClassName={imgClassName} //img size
+              titleClassName={titleClassName} //text size
+              spareImg={spareImg} //img
             />
          ))}
       </BentoGrid>
