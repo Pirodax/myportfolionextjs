@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { rgba } from "framer-motion";
 import { MdGradient } from "react-icons/md";
+import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 
 export const BentoGrid = ({
   className,
@@ -56,25 +57,42 @@ export const BentoGridItem = ({
         backgroundColor: 'linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 191, 1) 75%, rgba(106, 48, 207, 1) 100%)',
       }}
     >
-      <div className ={`${id ===6}&& 'flex justify-center h-full`} >
-        <div className="w-full h-full absolute">
-          {img && (
-            <img 
-              src={img}
-              alt="img"
-              className={cn(imgClassName, 'object-cover,object-center')}
-            />
-          )}
-        </div>
+      
+    <div className ={`${id ===6}&& 'flex justify-center h-full`} >
+      <div className="w-full h-full absolute">
+        {img && (   // image sur les widget
+          <img 
+            src={img}
+            alt={img}
+            className={cn(imgClassName, 'object-cover,object-center')}
+          />
+        )}
       </div>
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
-          {title}
+      <div className = {`absolute right-0 -bottom-5 ${id===5 && 'w-full opacity-80'}`}>
+      {spareImg && ( 
+        <img
+            src={spareImg}
+            alt={spareImg}
+            className={ 'object-cover,object-center w-full h-full' }
+          />
+        )}
+      </div>
+      {id === 6 && (
+        <BackgroundGradientAnimation>
+        <div className ="absolut z-50 flex items-center justify-center text-white font-bold">
+          
         </div>
-        <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
-          {description}
-        </div>
+        </BackgroundGradientAnimation>
+      )}
+    </div>
+    <div className="transition duration-200 group-hover/bento:translate-x-2">
+      <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+        {title}
+      </div>
+      <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
+        {description}
       </div>
     </div>
+  </div>
   );
 };

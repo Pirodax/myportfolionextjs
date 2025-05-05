@@ -1,5 +1,5 @@
 "use client";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const words = `Yo c'est ludovic le meilleur dev du monde
 `;
