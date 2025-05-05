@@ -9,3 +9,4 @@ export function cn(...inputs: ClassValue[]) {
 // for text generate effect 
 // for floating Navbar
 // for Background Gradient Animation
+// for Globe 
