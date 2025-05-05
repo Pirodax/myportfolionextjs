@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 
 21:46 sur 2:44:25 J1
 44:10 sur 2:44:25 J2
-53:31 sur 2:44:25 J3
+1:08:31 sur 2:44:25 J3
 
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight

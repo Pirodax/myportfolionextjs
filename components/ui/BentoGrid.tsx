@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { rgba } from "framer-motion";
 import { MdGradient } from "react-icons/md";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-
+import GlobeDemo  from "./GridGlobe";
 export const BentoGrid = ({
   className,
   children,
@@ -13,7 +13,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
+        "relative overflow-hidden mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
         className,
       )}
     >
@@ -48,7 +48,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none  ",
+        " group/bento relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none  ",
         className,
       )}
       // style = color de fond des widget  
@@ -100,7 +100,9 @@ export const BentoGridItem = ({
         <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
           {title}
         </div>
-
+      
+       {/* for the github 3d globe */}
+       {id === 2 && <GlobeDemo />}
       </div>
     </div>
     <div className="transition duration-200 group-hover/bento:translate-x-2">

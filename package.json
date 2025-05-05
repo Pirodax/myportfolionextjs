@@ -12,6 +12,7 @@
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "@tabler/icons-react": "^3.31.0",
+    "@turf/turf": "^7.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.4",
     "jsx": "^0.9.89",
@@ -25,7 +26,8 @@
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.176.0",
-    "three-globe": "^2.42.4"
+    "three-globe": "^2.42.4",
+    "turf": "^3.0.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
