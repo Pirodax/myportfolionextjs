@@ -9,7 +9,8 @@ On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou 
 https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 
 21:46 sur 2:44:25 J1
-38:28 sur 2:44:25 J2
+44:10 sur 2:44:25 J2
+
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
 
