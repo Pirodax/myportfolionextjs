@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./globals.css";
 import { FaHome } from "react-icons/fa";
 import { FloatingNav } from "@/components/ui/FloatingNav";
+import Rencentprojects from "@/components/Rencentprojects";
 
 export default function Home() {
   return (
@@ -12,9 +13,9 @@ export default function Home() {
         <FloatingNav navItems={
           [{ name: "Home", link: "/",icon: <FaHome/> }, { name: "About", link: "/about" }, { name: "Projects", link: "/projects" }, { name: "Contact", link: "/contact" }]} className="z-50"
         />
-        
         <Hero />
         <Grid />
+        <Rencentprojects/>
       </div>
     </main>
   );

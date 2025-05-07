@@ -44,7 +44,9 @@ https://www.npmjs.com/package/react-icons
 
 
 
-
+# Idée pour toujours faire mieux:
+## Pour ouvrir mail direct 
+mailto: // ouvrir direct la boite mail de l'utilisateur 
 
 
 
