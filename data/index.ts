@@ -22,6 +22,7 @@ export const gridItems = [
     title: "I'm very flexible with time zone communications",
     description: "",
     className: "lg:col-span-1 md:col-span-3 md:row-span-1",
+    //className: "fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white/90 px-6 py-3 rounded-xl shadow-lg", fait un grid qui te suit 
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",

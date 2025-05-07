@@ -2,7 +2,7 @@
 this is my portfolio the good one 
 
 # Note 
-On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou je serais moi Ludovic BERGERON une grosse dinde 
+On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou je serais moi Ludovic BERGERON une grosse dinde 07/05/2025(embiteux mais pour ce weekend tkt)
 
 
 # Video tutoriel utilisé:
@@ -11,6 +11,8 @@ https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 21:46 sur 2:44:25 J1
 44:10 sur 2:44:25 J2
 1:08:31 sur 2:44:25 J3
+x J4
+
 
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight

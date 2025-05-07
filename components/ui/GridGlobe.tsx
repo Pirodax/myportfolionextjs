@@ -34,22 +34,15 @@ export default function GlobeDemo() {
 
   const sampleArcs = [
     {
-      order: 1,
+      order: 2,
       startLat: -19.885592,
       startLng: -43.951191,
       endLat: 23.6978,    // latitude approximative du centre de Taïwan
       endLng: 120.9605,   // longitude approximative du centre de Taïwan
       arcAlt: 0.1,
-      color: colors[2],
-    },
-    {
-      order: 1,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: -22.9068,
-      endLng: -43.1729,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+      color: "#ff0000", // couleur qui ne foncctionne pas 
+      //color: colors[Math.floor(Math.random() * (colors.length - 1))],
+
     },
     {
       order: 1,
@@ -405,32 +398,10 @@ export default function GlobeDemo() {
   ];
 
   return (
-    <div className="flex item-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full ">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-        {/* <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-            We sell soap worldwide
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            This globe is interactive and customizable. Have fun with it, and
-            don&apos;t forget to share it. :)
-          </p> 
-        </motion.div>*/}
+    <div className="flex item-center justify-center absolute -left-2 top-9 md:top-40 w-full h-full ">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden md:h-[40rem] px-4 h-96">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+        <div className="absolute w-full  h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

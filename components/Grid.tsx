@@ -6,6 +6,8 @@ import { gridItems } from '@/data'
 const Grid = () => {
   return (
     <section id="about">
+      <div className="min-h-screen flex items-center justify-center">
+
       <BentoGrid>
          {gridItems.map(({id, title , description, className , img , imgClassName, titleClassName, spareImg}) => ( //gidItems est un tableau d'objets possition: data/index.ts
             <BentoGridItem
@@ -21,6 +23,7 @@ const Grid = () => {
             />
          ))}
       </BentoGrid>
+      </div>
     </section>
   )
 }

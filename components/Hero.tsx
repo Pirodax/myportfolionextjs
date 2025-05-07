@@ -55,11 +55,11 @@ const Hero = () => {
                      possition='rigth'
 
                     />
-                </a>
+                </a> 
                 
-            </div>
+            </div> 
 
-        </div>
+        </div> 
 
         
     </div>
