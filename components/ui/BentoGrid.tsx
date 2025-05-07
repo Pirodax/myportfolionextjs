@@ -7,6 +7,9 @@ import animationData from "@/data/confetti.json";
 import Lottie from 'lottie-react';
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from 'react-icons/io5';
+import dynamic from "next/dynamic";// tester si mieux
+
+
 export const BentoGrid = ({
   className,
   children,
@@ -53,10 +56,13 @@ export const BentoGridItem = ({
   const [copied , setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('contact@jsmastery.pro');
+    navigator.clipboard.writeText('bergeron@et.esiea.fr');
 
     setCopied(true);
   }
+  const Lottie = dynamic(() => import("lottie-react"), {
+    ssr: false// tester si mieuxx
+  });
   return (
     <div
       className={cn(
@@ -70,7 +76,7 @@ export const BentoGridItem = ({
       }}
     >
       
-      <div className ={`${id ===6}&& 'flex justify-center h-full`} >
+      <div className ={`${id ===6 && 'flex justify-center'} h-full`} >
         <div className="w-full h-full absolute">
           {img && (   // image sur les widget
             <img 
