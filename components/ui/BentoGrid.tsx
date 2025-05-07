@@ -3,13 +3,15 @@ import { rgba } from "framer-motion";
 import { MdGradient } from "react-icons/md";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import GlobeDemo  from "./GridGlobe";
+import { useEffect, useRef, useState } from "react";
 export const BentoGrid = ({
   className,
   children,
 }: {
   className?: string;
   children?: React.ReactNode;
-}) => {
+}) => { 
+  
   return (
     <div
       className={cn(
@@ -45,10 +47,11 @@ export const BentoGridItem = ({
   spareImg?: string;
 
 }) => {
+  const [copied , setCopied] = useState(false);
   return (
     <div
       className={cn(
-        " group/bento overflow-hidden relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none  ",
+        " group/bento overflow-hidden relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl transition duration-200 hover:shadow-xl  dark:shadow-none border-white/[0.1]   ",
         className,
       )}
       // style = color de fond des widget  
@@ -114,25 +117,35 @@ export const BentoGridItem = ({
                   {item}
                 </span>
               ))}
-              
               <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
             </div>
-            {/* <div className = "flex flex-col gap-3 lg:gap-8">
-              {['Html','css','Next.js','TypeScript'].map
+            <div className = "flex flex-col gap-3 lg:gap-8">
+            <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
+
+              {['Html','css','TypScript'].map
               ((item) => (
                 <span key={item} className="py-2 lg:py4 lg:px-3 px-3 texte-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                   {item}
                 </span>
               ))}
+            </div>
+          </div>
+        )}
+        {id === 6 &&(
+          <div className = "mt-5 relative">
+            <div className = {`absolute -botton-5 right-0`}>
+            <Lottie option={{
+              loop:copied, 
+              autoplay: copied,
+              animationData: animation ,
               
-              <span className=" py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
-            </div> */}
-        </div>
+            }}/>
+            </div>
+          </div>
+        )}
         
-          )}
+         
         </div>
-      
-        
       </div>
     </div>
   );
