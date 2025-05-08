@@ -49,7 +49,9 @@ https://www.npmjs.com/package/react-icons
 mailto: // ouvrir direct la boite mail de l'utilisateur 
 
 
-
+## Pour montrer tous mes voyage dans le monde :
+Remote Connectivity
+https://ui.aceternity.com/components/world-map
 
 
 
