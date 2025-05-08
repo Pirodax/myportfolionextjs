@@ -10,3 +10,4 @@ export function cn(...inputs: ClassValue[]) {
 // for floating Navbar
 // for Background Gradient Animation
 // for Globe 
+// for 3D pin

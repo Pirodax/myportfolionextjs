@@ -10,10 +10,11 @@ const Rencentprojects = () => {
         </h1>
             
         <div className = "flex flex-wrap items-center justify-center gap-16 mt-10 p-4">
-            {projects.map((project) => (
-                <div>
-                    {project.title} 
-                </div> // afficher le titre de chaque projet dans project.title projet
+            {projects.map(({id,title,des,img,iconLists,link,}) => (
+                <div key={id} className= "lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
+                    {title} 
+
+                </div> //<----------------- // afficher le titre de chaque projet dans project.title projet
             ))}
         </div>
     </div>

@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 44:10 sur 2:44:25 J2
 1:08:31 sur 2:44:25 J3
 x J4
-1:20:07 sur 2:44:25 J5
+1:25:49 sur 2:44:25 J5
 
 
 # liens pour tous les contents:
@@ -36,7 +36,7 @@ http://www.proftnj.com/RGB3.htm
 # liens pour mode nuit et jour :
 https://ui.shadcn.com/docs/dark-mode/next
 
-
+ 
 
 # liens pour react icons
 https://www.npmjs.com/package/react-icons
