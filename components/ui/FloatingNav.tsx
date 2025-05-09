@@ -66,7 +66,7 @@ export const FloatingNav = ({
         href={navItem.link}
         onClick={(e) => {
           e.preventDefault();
-          const targetId = navItem.link.replace("#", "");
+          const targetId = navItem.link.replace("#", ""); // deplacement en scorlant
           const target = document.getElementById(targetId);
           if (target) {
             target.scrollIntoView({ behavior: "smooth" });
