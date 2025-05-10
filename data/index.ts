@@ -4,26 +4,48 @@ export const navItems = [
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-// lg:col-span- = longeur
-// md:row-span- = hauteur 
+/////////////////////////////////// on est sur un tableau 6X6 (modifible dans BentoGrid.tsx)
+// lg: pour large (grande ecran)
+// md: pour medium (moyen ecran)
+// sm: pour small (petit ecran) ou rien pour movbile de base
+// col-span-x = x colonne
+// row-span-x = x ligne 
+// lg:col-start-1 = commence à la colonne 1 pour lg
+// md:row-start-1 = commence à la ligne 1 pour md
+//////////////////////////////////////////////
+//className: "fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white/90 px-6 py-3 rounded-xl shadow-lg", fait un grid qui te suit 
+// Les utilitaires disponibles :
+
+// object-top, object-bottom, object-left, object-right
+
+// Combinaisons : object-top-left, object-bottom-right, etc.
 export const gridItems = [
   {
     id: 1,
-    title: "La colaboration est la clé pour des projets ambiteux",
+    title: "La collaboration est la clé pour des projets ambitieux",
     description: "",
-    className: "lg:col-span-2 md:col-span-6 md:row-span-2 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    className: [
+      "lg:col-span-4 md:col-span-4",
+      "lg:col-start-1 md:col-start-1",
+      "lg:row-span-2 md:row-span-2",
+      "lg:row-start-1 md:row-start-1",
+    ].join(" "),
+    imgClassName: "absolute left-0 top-0 w-full h-full object-cover ",
     titleClassName: "justify-end",
     img: "/b1.svg",
     spareImg: "",
+     
   },
-  {
+  {// pour afficher le globe il faut row = 2*col
     id: 2,
     title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-1 md:col-span-3 md:row-span-1",
-    //className: "fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white/90 px-6 py-3 rounded-xl shadow-lg", fait un grid qui te suit 
-    imgClassName: "",
+    className: [
+    "lg:col-span-2 md:col-span-2",
+    "lg:col-start-5 md:col-start-5",
+    "lg:row-span-1 md:row-span-1",
+    "lg:row-start-1 md:row-start-1",
+    ].join(" "),
+    imgClassName: "w-full h-full object-cover",
     titleClassName: "justify-start",
     img: "",
     spareImg: "",
@@ -32,7 +54,12 @@ export const gridItems = [
     id: 3,
     title: "My tech stack",
     description: "I constantly try to improve",
-    className: "lg:col-span-1 md:col-span-3 md:row-span-1",
+    className: [
+    "lg:col-span-2 md:col-span-2",
+    "lg:col-start-5 md:col-start-5",
+    "lg:row-span-1 md:row-span-1",
+    "lg:row-start-2 md:row-start-2",
+    ].join(" "),
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -41,19 +68,27 @@ export const gridItems = [
   {
     id: 4,
     title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: [
+    "lg:col-span-3 md:col-span-3",
+    "lg:col-start-1 md:col-start-1",
+    "lg:row-span-0.5 md:row-span-0.5",
+    "lg:row-start-3 md:row-start-3",
+    ].join(" "),
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
     title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
-    className: "md:col-span-1.5 md:row-span-1",
+    className: [
+    "lg:col-span-3 md:col-span-3",
+    "lg:col-start-4 md:col-start-4",
+    "lg:row-span-2 md:row-span-2",
+    "lg:row-start-3 md:row-start-3",
+    ].join(" "),
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
@@ -62,8 +97,12 @@ export const gridItems = [
   {
     id: 6,
     title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-1 md:col-span-3 md:row-span-0.5",
+    className: [
+    "lg:col-span-3 md:col-span-3",
+    "lg:col-start-1 md:col-start-1",
+    "lg:row-span-0.5 md:row-span-0.5",
+    "lg:row-start-4 md:row-start-4",
+    ].join(" "),
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

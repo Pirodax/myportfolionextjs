@@ -20,8 +20,9 @@ export const BentoGrid = ({
   
   return (
     <div
-      className={cn(
-        "relative overflow-hidden mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
+      className={cn( //gap-y-8 pour l'espacement entre les widgets
+        "relative overflow-hidden mx-auto grid max-w-7xl grid-cols-1 gap-x-4 gap-y-4 " +
+        "md:grid-cols-6 lg:grid-cols-6 md:auto-rows-[18rem]",
         className,
       )}
     >
@@ -119,9 +120,11 @@ export const BentoGridItem = ({
 
           
         
-        
-        {/* for the github 3d globe */}
-        {id === 2 && <GlobeDemo />}
+        {id === 2 && (
+          <div className="flex justify-center w-full h-full">
+            <GlobeDemo />
+          </div>
+        )}
 
         {id === 3 && (
         <div className= "flex gap-1 lg:gap-5 w-fit absolute right-3 lg:-right-2">
