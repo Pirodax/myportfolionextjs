@@ -12,6 +12,7 @@
     "@lottiefiles/react-lottie-player": "^3.6.0",
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
+    "@sentry/nextjs": "^9.17.0",
     "@tabler/icons-react": "^3.31.0",
     "@turf/turf": "^7.2.0",
     "@types/react-datepicker": "^6.2.0",
