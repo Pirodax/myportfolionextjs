@@ -52,7 +52,7 @@ https://esiea-wv.sentry.io/issues/41006465/?project=4509295767715920&referrer=on
 # Idée pour toujours faire mieux:
 ## Pour ouvrir mail direct 
 mailto: // ouvrir direct la boite mail de l'utilisateur 
-
+back ground qu'on peux changer rendre bcp plus leger 
 
 ## Pour montrer tous mes voyage dans le monde :
 Remote Connectivity

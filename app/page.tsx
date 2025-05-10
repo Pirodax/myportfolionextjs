@@ -6,6 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import Rencentprojects from "@/components/Rencentprojects";
 import { navItems } from "@/data";
+import Clents from "@/components/Clents";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Rencentprojects/>
+        <Clents/>
       </div>
     </main>
   );
