@@ -20,9 +20,9 @@ export const BentoGrid = ({
   
   return (
     <div
-      className={cn( //gap-y-8 pour l'espacement entre les widgets
+      className={cn( //gap-y-6 pour l'espacement entre les widgets
         "relative overflow-hidden mx-auto grid max-w-7xl grid-cols-1 gap-x-4 gap-y-4 " +
-        "md:grid-cols-6 lg:grid-cols-6 md:auto-rows-[18rem]",
+        "md:grid-cols-6 lg:grid-cols-6 md:auto-rows-[18rem] bg-border-white",
         className,
       )}
     >
@@ -67,7 +67,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        " group/bento overflow-hidden relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl transition duration-200 hover:shadow-xl  dark:shadow-none border-white/[0.1]   ",
+        " group/bento overflow-hidden relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl transition duration-200 hover:shadow-xl  dark:shadow-none bg-border-white border border-white/10   ",
         className,
       )}
       // style = color de fond des widget  

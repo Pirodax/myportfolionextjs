@@ -1,3 +1,5 @@
+import { MdDescription } from "react-icons/md";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -38,7 +40,8 @@ export const gridItems = [
   },
   {// pour afficher le globe il faut row = 2*col
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Je suis habitué à travailler au sein d'équipes multiculturelles",
+    description:"faites touner ;)",
     className: [
     "lg:col-span-2 md:col-span-2",
     "lg:col-start-5 md:col-start-5",

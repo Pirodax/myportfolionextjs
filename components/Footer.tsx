@@ -5,16 +5,16 @@ import { socialMedia } from '@/data'
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10 "id="contact">
-      {/* background grid */}
+    <footer className="w-full pb-10 mb-[100px] md:mb-5  "id="contact">
+      {/* background grid
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-50"
         />
-      </div>
-      <div className="w-full pt-20 pb-10 flex flex-col items-center">
+      </div> */}
+      <div className="w-full pb-10 flex flex-col items-center">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
           Pas encore convaincu ?<br /> Je serais ravi de vous démontrer 
           <span className="text-purple">  mes compétences </span> lors d'un entretien.

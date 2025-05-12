@@ -10,7 +10,7 @@ import { FaLocationArrow } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div className ="pb-20 pt-36">   
+    <div className =" mb-[100px] pt-36">   
         <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -46,7 +46,7 @@ const Hero = () => {
                 </h2>
                 <TextGenerateEffectDemo/> {/* Text animation effect  qui se trouve dans components*/}
                 <p className = "text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
-                    hello, je suis Ludovic, un développeur web passionné par la création d'expériences numériques uniques.
+                    🚀 Prêt à relever de nouveaux défis en alternance ! 🚀
                 </p>
                 <a href="about">
                     <MagicButton
