@@ -16,8 +16,8 @@ x J4
 1:50:15 sur 2:44:25 J6 Gros probleme avec SENTRY globall css ?
 2:05:42 sur 2:44:25 J7 plus de problemes 
 x J8
-2:14:52 sur 2:44:25 J9
-
+fini  sur 2:44:25 J9
+passe au deployment !!!!!!
 
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
@@ -51,7 +51,8 @@ https://esiea-wv.sentry.io/issues/41006465/?project=4509295767715920&referrer=on
 (connection avec github)
 # Deploiment avec CloudFare 
 https://dash.cloudflare.com/b3e152525a8f5541cb62c7f3189b8a50/home
-______________________________________________________________
+
+------------------------------------------------------------
 # Idée pour toujours faire mieux:
 ## Pour ouvrir mail direct 
 mailto: // ouvrir direct la boite mail de l'utilisateur 
