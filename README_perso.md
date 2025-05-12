@@ -45,12 +45,13 @@ https://ui.shadcn.com/docs/dark-mode/next
 # liens pour react icons
 https://www.npmjs.com/package/react-icons
 
-
+------------------------------------------------------------
 # SENTRY pour les erreurs et suivi du site 
 https://esiea-wv.sentry.io/issues/41006465/?project=4509295767715920&referrer=onboarding-first-event-footer 
-
 (connection avec github)
-
+# Deploiment avec CloudFare 
+https://dash.cloudflare.com/b3e152525a8f5541cb62c7f3189b8a50/home
+______________________________________________________________
 # Idée pour toujours faire mieux:
 ## Pour ouvrir mail direct 
 mailto: // ouvrir direct la boite mail de l'utilisateur 
