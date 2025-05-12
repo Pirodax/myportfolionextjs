@@ -6,7 +6,7 @@ const Clents = () => {
   return (
     <div className ="py-20" id="testimonials">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-            Petit mot de {' '}
+            Petits mots de {' '}
             <span className="text-purple">mes colaborateurs</span>
         </h1>
             

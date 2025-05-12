@@ -11,3 +11,5 @@ export function cn(...inputs: ClassValue[]) {
 // for Background Gradient Animation
 // for Globe 
 // for 3D pin
+// for Infinite Moving Cards
+// MovingBorders 

@@ -6,7 +6,7 @@ On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou 
 
 
 # Video tutoriel utilisé:
-https://www.youtube.com/watch?v=FTH6Dn3AyIQ
+https://www.youtube.com/watch?v=FTH6Dn3AyIQ&ab_channel=JavaScriptMastery
 
 21:46 sur 2:44:25 J1
 44:10 sur 2:44:25 J2
@@ -14,6 +14,7 @@ https://www.youtube.com/watch?v=FTH6Dn3AyIQ
 x J4
 1:35:49 sur 2:44:25 J5
 1:50:15 sur 2:44:25 J6 Gros probleme avec SENTRY globall css ?
+2:05:42 sur 2:44:25 J7 plus de problemes 
 fini par pitié J7
 
 
