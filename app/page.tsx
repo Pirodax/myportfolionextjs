@@ -8,6 +8,7 @@ import Rencentprojects from "@/components/Rencentprojects";
 import { navItems } from "@/data";
 import Clents from "@/components/Clents";
 import Experiences from "@/components/Experiences";
+import MyApproach from "@/components/MyApproach";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Rencentprojects/>
         <Clents/>
         <Experiences/>
+        <MyApproach/>
       </div>
     </main>
   );

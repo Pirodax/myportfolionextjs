@@ -15,7 +15,8 @@ x J4
 1:35:49 sur 2:44:25 J5
 1:50:15 sur 2:44:25 J6 Gros probleme avec SENTRY globall css ?
 2:05:42 sur 2:44:25 J7 plus de problemes 
-fini par pitié J7
+x J8
+2:14:52 sur 2:44:25 J9
 
 
 # liens pour tous les contents:
