@@ -35,7 +35,7 @@ const MyApproach = () => {
                 [236, 72, 153],
                 [232, 121, 249],
               ]}
-              dotSize={2}
+              dotSize={1}
             
             />
           
