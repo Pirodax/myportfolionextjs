@@ -46,6 +46,10 @@
     animation: shimmer 2s linear infinite;
   }
 }
+/* Pour masquer le curseur */
+.no-caret {
+    caret-color: transparent;
+}
 
 /* Gradients X Animations */
 @theme inline {

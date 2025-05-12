@@ -13,7 +13,7 @@ import Flooter from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center  flex-col mx-auto sm:px-10 px-5 overflow-clip">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip no-caret">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems}/>
         <Hero />
@@ -21,7 +21,7 @@ export default function Home() {
         <Rencentprojects/>
         <Clents/>
         <Experiences/>
-        <MyApproach/>
+        {/* <MyApproach/> */}
         <Flooter/>
       </div>
     </main>

@@ -19,26 +19,21 @@ const MyApproach = () => {
           >
             <CanvasRevealEffect
               animationSpeed={5.1}
-              containerClassName="bg-emerald-900"
+              containerClassName="bg-sky-600"
+              colors={[[125, 211, 252]]}
             />
         </Card>
         <Card 
-
           title="Analyser et optimiser les processus" 
-          icon={<AceternityIcon order = "Phrase 2" />}
+          icon={<AceternityIcon order="Phrase 2" />}
           description="Collecter des données, repérer les gisements d’amélioration et mettre en place des indicateurs de performance pour accroître l’efficacité et réduire les coûts."
-          >
-            <CanvasRevealEffect
-              animationSpeed={3}
-              containerClassName="bg-black"
-              colors={[
-                [236, 72, 153],
-                [232, 121, 249],
-              ]}
-              dotSize={1}
-            
-            />
-          
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-purple-600"
+             
+            dotSize={1}
+          />
         </Card>
         <Card 
           title="Collaborer et communiquer de façon proactive" 
@@ -55,26 +50,38 @@ const MyApproach = () => {
     </section>
   );
 }
-
 const Card = ({
-
   title,
   icon,
   description,
   children
 }: {
- 
   title: string;
   icon: React.ReactNode;
   description: string;
   children?: React.ReactNode;
 }) => {
   const [hovered, setHovered] = React.useState(false);
+  const timerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    timerRef.current = setTimeout(() => {
+      setHovered(false);
+    }, 5000);
+  };
+
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4  lg:h-[35rem] relative rounded-3xl"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2] max-w-sm w-full mx-auto p-4 lg:h-[35rem] relative rounded-3xl"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
@@ -94,13 +101,16 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center">
           {icon}
         </div>
-        <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
+        <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
           {title}
         </h2>
-        <h2 className="dark:text-white text-ml opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{ color: '#e4ecff'}}>
+        <h2
+          className="dark:text-white text-ml opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center"
+          style={{ color: "#e4ecff" }}
+        >
           {description}
         </h2>
       </div>
@@ -138,3 +148,7 @@ export const Icon = ({ className, ...rest }: any) => {
   );
 };
 export default MyApproach;
+
+function setDisplayed(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
