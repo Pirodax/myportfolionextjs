@@ -254,9 +254,11 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/Pirodax"
   },
   {
     id: 2,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/ludovic-bergeron-14b308268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
   },
 ];
