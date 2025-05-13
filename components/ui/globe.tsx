@@ -120,8 +120,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (!globeRef.current || !isInitialized || !data) return;
 
     const arcs = data;
-    let points = [];
-    for (let i = 0; i < arcs.length; i++) {
+    const points = [];
+    for (var i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
@@ -150,6 +150,15 @@ export function Globe({ globeConfig, data }: WorldProps) {
         ) === i,
     );
 
+          // Within your useEffect where you update data, add these accessor functions:
+    const getArcStartLat = (obj: object): number => (obj as Position).startLat;
+    const getArcStartLng = (obj: object): number => (obj as Position).startLng;
+    const getArcEndLat = (obj: object): number => (obj as Position).endLat;
+    const getArcEndLng = (obj: object): number => (obj as Position).endLng;
+    const getArcColor = (obj: object): string => (obj as Position).color;
+    const getArcAltitude = (obj: object): number => (obj as Position).arcAlt;
+    const getArcDashInitialGap = (obj: object): number => (obj as Position).order;
+
     globeRef.current
       .hexPolygonsData(countries.features)
       .hexPolygonResolution(3)
@@ -161,25 +170,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .arcsData(data)
-      .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
-      .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
-      .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
-      .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e) => (e as { arcAlt: number }).arcAlt * 1)
+      .arcStartLat(getArcStartLat)
+      .arcStartLng(getArcStartLng)
+      .arcEndLat(getArcEndLat)
+      .arcEndLng(getArcEndLng)
+      .arcColor(getArcColor)
+      .arcAltitude(getArcAltitude)
       .arcStroke(() => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
       .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as { order: number }).order * 1)
+      .arcDashInitialGap(getArcDashInitialGap)
       .arcDashGap(15)
       .arcDashAnimateTime(() => defaultProps.arcTime);
 
-    globeRef.current
+      globeRef.current
       .pointsData(filteredPoints)
-      .pointColor((e) => (e as { color: string }).color)
+      .pointColor((obj: object) => (obj as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
-
+      
     globeRef.current
       .ringsData([])
       .ringColor(() => defaultProps.polygonColor)

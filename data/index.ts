@@ -66,7 +66,7 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
-    spareImg: "/ui.earth.com",
+    //spareImg: "/ui.earth.com",
   },
   // {
   //   id: 4,
@@ -150,7 +150,7 @@ export const projects = [
     id: 5,
     title: "Design Logo - Figma",
     des: "Logo design project using Figma, showcasing creativity and design skills.",
-    img: "/p5.svg",
+    img: "/b5.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
   },

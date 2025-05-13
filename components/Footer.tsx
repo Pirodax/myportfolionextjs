@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="w-full pb-10 flex flex-col items-center">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
           Pas encore convaincu ?<br /> Je serais ravi de vous démontrer 
-          <span className="text-purple">  mes compétences </span> lors d'un entretien.
+          <span className="text-purple">  mes compétences </span> lors d&rsquo;un entretien
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center text-xl">
           « Prenons rendez-vous à votre convenance pour échanger sur vos besoins et explorer ensemble les opportunités de collaboration. »
