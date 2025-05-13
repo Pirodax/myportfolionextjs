@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdDescription } from 'react-icons/md'
+// import { MdDescription } from 'react-icons/md'
 import { BentoGridItem } from './ui/BentoGrid'
 import { BentoGrid } from './ui/BentoGrid'
 import { gridItems } from '@/data'

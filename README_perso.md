@@ -64,4 +64,8 @@ https://ui.aceternity.com/components/world-map
 
 
 
+# revenir au git d'avant 
+git reset --hard HEAD
 
+
+soit reparer le build soit ignorer les messages d'erreurs

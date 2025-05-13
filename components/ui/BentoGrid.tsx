@@ -4,7 +4,7 @@ import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import GlobeDemo  from "./GridGlobe";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from 'react-icons/io5';
 import dynamic from "next/dynamic";// tester si mieux

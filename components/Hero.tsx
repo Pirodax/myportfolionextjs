@@ -2,7 +2,7 @@ import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { cn } from "@/lib/utils";
 
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+// import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { TextGenerateEffectDemo } from './TextGenerateEffectDemo';
 import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa';

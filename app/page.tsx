@@ -1,14 +1,14 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
-import Image from "next/image";
+// import Image from "next/image";
 import "./globals.css";
-import { FaHome } from "react-icons/fa";
+// import { FaHome } from "react-icons/fa";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import Rencentprojects from "@/components/Rencentprojects";
 import { navItems } from "@/data";
 import Clents from "@/components/Clents";
 import Experiences from "@/components/Experiences";
-import MyApproach from "@/components/MyApproach";
+// import MyApproach from "@/components/MyApproach";
 import Flooter from "@/components/Footer";
 
 export default function Home() {
