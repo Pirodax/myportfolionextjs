@@ -2,7 +2,7 @@ import React from 'react'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data'
-
+import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className="w-full pb-10 mb-[100px] py-20 md:mb-5  "id="contact">
@@ -42,10 +42,13 @@ const Footer = () => {
             >
               <a href={profile.link} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center">
                 <button className="w-full h-full flex items-center justify-center">
-                  <img 
+                  <Image 
                     src={profile.img} 
                     alt={profile.id.toString()} 
+                    width ={64}
+                    height={64}
                     className="w-2/3 h-2/3 object-contain"
+
                   />
                 </button>
               </a>

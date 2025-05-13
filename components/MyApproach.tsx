@@ -155,6 +155,6 @@ export const Icon = ({
 };
 export default MyApproach;
 
-function setDisplayed(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
+// function setDisplayed(arg0: boolean) {
+//   throw new Error("Function not implemented.");
+// }
