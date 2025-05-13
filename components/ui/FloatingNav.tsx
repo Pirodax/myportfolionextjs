@@ -60,25 +60,25 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <a
-        key={`link=${idx}`}
-        href={navItem.link}
-        onClick={(e) => {
-          e.preventDefault();
-          const targetId = navItem.link.replace("#", ""); // deplacement en scorlant
-          const target = document.getElementById(targetId);
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
-        className={cn(
-          "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-        )}
-          >
-        <span className="block sm:hidden">{navItem.icon}</span>
-        <span className=" text-sm !cursor-pointeur">{navItem.name}</span>
-          </a>
+        {navItems.map((navItem: { name: string; link: string; icon?: React.ReactNode }, idx: number) => (
+        <a
+          key={`link=${idx}`}
+          href={navItem.link}
+          onClick={(e) => {
+            e.preventDefault();
+            const targetId = navItem.link.replace("#", ""); // deplacement en scorlant
+              const target = document.getElementById(targetId);
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+          }}
+          className={cn(
+            "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+          )}
+            >
+          <span className="block sm:hidden">{navItem.icon}</span>
+          <span className=" text-sm !cursor-pointeur">{navItem.name}</span>
+        </a>
         ))}
         {/*#log button here <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Login</span>

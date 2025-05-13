@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { cn } from "@/lib/utils";
@@ -48,16 +49,21 @@ const Hero = () => {
                 <p className = "text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
                     🚀 Prêt à relever de nouveaux défis en alternance ! 🚀
                 </p>
-                <a href="about">
-                    <MagicButton
-                     title="Voir mon travail "
-                     icon={<FaLocationArrow/>}
-                     possition='rigth'
-
-                    />
-                </a> 
+               <MagicButton
+                title="Voir mon travail"
+                icon={<FaLocationArrow />}
+                possition="right"
+                handleclick={() => {
+                  const target = document.getElementById("projects");
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              />
                 
             </div> 
+
+
 
         </div> 
 
