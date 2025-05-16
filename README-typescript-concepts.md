@@ -16,5 +16,9 @@
     caret-color: transparent;
 }
 //no-caret = Pour masquer le curseu
+
+
+dark:bg-black-100 = mettre la couleur black 100 suelement quand le mode black est activé
+
 //////////////////////////////////////////////
 //className: "fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white/90 px-6 py-3 rounded-xl shadow-lg", fait un grid qui te suit 

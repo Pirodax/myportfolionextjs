@@ -62,7 +62,24 @@ back ground qu'on peux changer rendre bcp plus leger
 Remote Connectivity
 https://ui.aceternity.com/components/world-map
 
+tuto publiez votre site statique :
 
+Mettez à jour next.config.js au format suivant :
+
+ts
+Copier le code
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  // … vos autres options
+};
+export default nextConfig;
+
+puis publier
+
+npx wrangler pages deploy out \
+  --project-name mon-portfolio \
+  --branch main
 
 # revenir au git d'avant 
 git reset --hard HEAD
