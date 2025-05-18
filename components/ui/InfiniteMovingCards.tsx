@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
 export const InfiniteMovingCards = ({
   items,
@@ -24,9 +24,45 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
+  // Pour le glissement tactile
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartX, setDragStartX] = useState(0);
+  const [dragDeltaX, setDragDeltaX] = useState(0);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    setDragStartX(e.touches[0].clientX);
+    // Désactive l'animation automatique pendant le glissement
+    if (scrollerRef.current) {
+      scrollerRef.current.classList.remove("animate-scroll");
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const delta = currentX - dragStartX;
+    setDragDeltaX(delta);
+    if (scrollerRef.current) {
+      // On applique le déplacement
+      scrollerRef.current.style.transform = `translateX(${delta}px)`;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    // Réinitialiser la transformation et réactiver l'animation automatique
+    if (scrollerRef.current) {
+      scrollerRef.current.style.transform = "";
+      scrollerRef.current.classList.add("animate-scroll");
+    }
+    setDragDeltaX(0);
+  };
+
   useEffect(() => {
     addAnimation();
   }, []);
+  
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -44,21 +80,17 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+  
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards",
-        );
+        containerRef.current.style.setProperty("--animation-direction", "forwards");
       } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse",
-        );
+        containerRef.current.style.setProperty("--animation-direction", "reverse");
       }
     }
   };
+  
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
@@ -70,12 +102,16 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       className={cn(
         "scroller relative z-20 w-screen overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className,
+        className
       )}
     >
       <ul
@@ -83,47 +119,47 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-16 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]",
+          pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
-            <li
+          <li
+            key={idx}
             className="relative w-[90vW] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 md:p-18 md:w-[60vw] dark:border-zinc-800 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
             style={{
-            background: 'rgb(2,0,36)',
-            backgroundColor: 'linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 191, 1) 75%, rgba(106, 48, 207, 1) 100%)',
-      }}
-            key={idx}
-            >
-                <blockquote>
-                    <div
-                        aria-hidden="true"
-                        className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                    ></div>
-                    <span className="relative z-20 text-sm md:text-lg leading-[1.6] font-normal text-white">
-                        {item.quote}
+              background: "rgb(2,0,36)",
+              backgroundColor:
+                "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 191, 1) 75%, rgba(106, 48, 207, 1) 100%)",
+            }}
+          >
+            <blockquote>
+              <div
+                aria-hidden="true"
+                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+              ></div>
+              <span className="relative z-20 text-sm md:text-lg leading-[1.6] font-normal text-white">
+                {item.quote}
+              </span>
+              <div className="relative z-20 mt-6 flex flex-row items-center">
+                <span className="flex flex-col gap-1">
+                  <Image
+                    src="/profile.svg"
+                    alt="profile"
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-xl leading-[1.6] font-bold text-white">
+                      {item.name}
                     </span>
-                    <div className="relative z-20 mt-6 flex flex-row items-center">
-                        <span className="flex flex-col gap-1">
-                            <Image 
-                              src="/profile.svg" 
-                              alt="profile" 
-                              width={50}   
-                              height={50}  
-                            />
-                        
-                            <div className="flex flex-col gap-1"> 
-                                <span className="text-xl leading-[1.6] font-bold text-white">
-                                    {item.name}
-                                </span>
-                                <span className="text-sm leading-[1.6] font-normal text-white-200">
-                                    {item.title}
-                                </span>
-                            </div>
-                        </span>
-                    </div>
-                </blockquote>
-            </li>
+                    <span className="text-sm leading-[1.6] font-normal text-white-200">
+                      {item.title}
+                    </span>
+                  </div>
+                </span>
+              </div>
+            </blockquote>
+          </li>
         ))}
       </ul>
     </div>

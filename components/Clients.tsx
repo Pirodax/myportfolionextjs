@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import { testimonials } from '@/data'
 // import { companies, testimonials } from '@/data'
 
-const Clents = () => {
+const Clients = () => {
   return (
     <div className ="py-20" id="testimonials">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
@@ -35,4 +35,4 @@ const Clents = () => {
   )
 }
 
-export default Clents
+export default Clients

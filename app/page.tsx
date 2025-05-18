@@ -6,7 +6,7 @@ import "./globals.css";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import Rencentprojects from "@/components/Rencentprojects";
 import { navItems } from "@/data";
-import Clents from "@/components/Clents";
+import Clients from "@/components/Clients";
 import Experiences from "@/components/Experiences";
 // import MyApproach from "@/components/MyApproach";
 import Flooter from "@/components/Footer";
@@ -20,7 +20,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Rencentprojects/>
-        <Clents/>
+        <Clients/>
         <Experiences/>
         {/* <MyApproach/> */}
         <Flooter/>
