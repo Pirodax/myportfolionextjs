@@ -1,0 +1,36 @@
+{
+  "components/Hero.tsx -> ./ui/Spotlight": {
+    "id": 85820,
+    "files": [
+      "static/chunks/820.80e0961f0cc574be.js"
+    ]
+  },
+  "components/ui/BentoGrid.tsx -> lottie-react": {
+    "id": 43770,
+    "files": [
+      "static/chunks/dc112a36.cf1291f446a1b68c.js",
+      "static/chunks/770.a7d46517d37d9928.js"
+    ]
+  },
+  "components/ui/GridGlobe.tsx -> @/components/ui/globe": {
+    "id": 86589,
+    "files": [
+      "static/chunks/b055d1fb.fb6507856f281dfb.js",
+      "static/chunks/b536a0f1.48fa0c784852f41d.js",
+      "static/chunks/bd904a5c.b09512a57e1ba0ad.js",
+      "static/chunks/5e094596.1f944f7d3bd8bfa4.js",
+      "static/chunks/1329d575.6ce2be97fe31b5cc.js",
+      "static/chunks/8ffc485e.d7235bd69d855d62.js",
+      "static/chunks/144.016b430cf2bfb9c1.js",
+      "static/chunks/589.0fb0e2d18165fd73.js"
+    ]
+  },
+  "node_modules/@react-three/drei/core/VideoTexture.js -> hls.js": {
+    "id": null,
+    "files": []
+  },
+  "node_modules/@react-three/drei/web/FaceLandmarker.js -> @mediapipe/tasks-vision": {
+    "id": null,
+    "files": []
+  }
+}
