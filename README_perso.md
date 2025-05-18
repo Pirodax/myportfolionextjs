@@ -81,7 +81,7 @@ npx wrangler pages deploy out \
 
 No statique (dynamique)
 # Build command
-npm ci && npx opennextjs-cloudflare build
+npm ci && npm run cf:build
 # Déployer la commande
 npx wrangler deploy
 
@@ -92,3 +92,8 @@ git reset --hard HEAD
 
 
 soit reparer le build soit ignorer les messages d'erreurs
+
+
+# redirection des page j'utilese useRouter 
+voirs doc:
+https://nextjs.org/docs/pages/api-reference/functions/use-router

@@ -1,4 +1,5 @@
 import { MdDescription } from "react-icons/md";
+// import ActiveLink from '/app/components/ActiveLink';
 
 export const navItems = [
   { name: "About", link: "#about" },
@@ -6,21 +7,7 @@ export const navItems = [
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-/////////////////////////////////// on est sur un tableau 6X6 (modifible dans BentoGrid.tsx)
-// lg: pour large (grande ecran)
-// md: pour medium (moyen ecran)
-// sm: pour small (petit ecran) ou rien pour movbile de base
-// col-span-x = x colonne
-// row-span-x = x ligne 
-// lg:col-start-1 = commence à la colonne 1 pour lg
-// md:row-start-1 = commence à la ligne 1 pour md
-//////////////////////////////////////////////
-//className: "fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white/90 px-6 py-3 rounded-xl shadow-lg", fait un grid qui te suit 
-// Les utilitaires disponibles :
 
-// object-top, object-bottom, object-left, object-right
-
-// Combinaisons : object-top-left, object-bottom-right, etc.
 export const gridItems = [
   {
     id: 1,
@@ -120,7 +107,7 @@ export const projects = [
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/Mes-Projets/Projet1.txt",
+    link: "/projet1",
   },
   {
     id: 2,

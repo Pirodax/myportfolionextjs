@@ -37,15 +37,15 @@ const Hero = () => {
         {/* Background gradient for the container */}
 
         <div className="absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-black-100 ">
-        <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(rgba(64,64,64,0.8)_1px,transparent_1px)]",//transparence (0.x)
-          
-        )}
-        />
+          <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:20px_20px]",
+            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+            "dark:[background-image:radial-gradient(rgba(64,64,64,0.8)_1px,transparent_1px)]",//transparence (0.x)
+            
+          )}
+          />
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"/>
          
