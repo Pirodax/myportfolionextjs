@@ -1,4 +1,4 @@
-name              = "my-portfolio"
+name              = "bergeron"
 account_id        = "b3e152525a8f5541cb62c7f3189b8a50"
 workers_dev       = true            # ou false si vous utilisez un domaine personnalisé
 compatibility_date = "2025-05-18"   # date du jour ou postérieure
