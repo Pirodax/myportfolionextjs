@@ -1,28 +1,49 @@
 {
+  "app/project1/page.tsx -> ../../components/ui/Spotlight": {
+    "id": 85820,
+    "files": [
+      "static/chunks/277-33d59767ab114285.js",
+      "static/chunks/820.628be3477a47d573.js"
+    ]
+  },
+  "app/project2/page.tsx -> ../../components/ui/Spotlight": {
+    "id": 85820,
+    "files": [
+      "static/chunks/277-33d59767ab114285.js",
+      "static/chunks/820.628be3477a47d573.js"
+    ]
+  },
+  "app/project3/page.tsx -> ../../components/ui/Spotlight": {
+    "id": 85820,
+    "files": [
+      "static/chunks/277-33d59767ab114285.js",
+      "static/chunks/820.628be3477a47d573.js"
+    ]
+  },
   "components/Hero.tsx -> ./ui/Spotlight": {
     "id": 85820,
     "files": [
-      "static/chunks/820.80e0961f0cc574be.js"
+      "static/chunks/439.0bc4aafc55460a14.js"
     ]
   },
   "components/ui/BentoGrid.tsx -> lottie-react": {
     "id": 43770,
     "files": [
-      "static/chunks/dc112a36.cf1291f446a1b68c.js",
-      "static/chunks/770.a7d46517d37d9928.js"
+      "static/chunks/dc112a36.8e38e46f17f3dd31.js",
+      "static/chunks/770.a659a6030a7b0a29.js"
     ]
   },
   "components/ui/GridGlobe.tsx -> @/components/ui/globe": {
     "id": 86589,
     "files": [
-      "static/chunks/b055d1fb.fb6507856f281dfb.js",
-      "static/chunks/b536a0f1.48fa0c784852f41d.js",
-      "static/chunks/bd904a5c.b09512a57e1ba0ad.js",
-      "static/chunks/5e094596.1f944f7d3bd8bfa4.js",
-      "static/chunks/1329d575.6ce2be97fe31b5cc.js",
-      "static/chunks/8ffc485e.d7235bd69d855d62.js",
-      "static/chunks/144.016b430cf2bfb9c1.js",
-      "static/chunks/589.0fb0e2d18165fd73.js"
+      "static/chunks/b055d1fb.fa20e06af6804adf.js",
+      "static/chunks/b536a0f1.5c740bb9bc8bb6c3.js",
+      "static/chunks/bd904a5c.e5b63aa7d44de2d3.js",
+      "static/chunks/5e094596.f22254851e8377b9.js",
+      "static/chunks/1329d575.a47e00ac411f6a71.js",
+      "static/chunks/8ffc485e.aaa190ab7947e20c.js",
+      "static/chunks/144.20a6b985d2acf834.js",
+      "static/chunks/589.c5457b73ec0aafc8.js"
     ]
   },
   "node_modules/@react-three/drei/core/VideoTexture.js -> hls.js": {

@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build",
+    "cf:build": "npx opennextjs-cloudflare build",
+    "deploy": "npm run cf:build && npx wrangler deploy"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.6.0",

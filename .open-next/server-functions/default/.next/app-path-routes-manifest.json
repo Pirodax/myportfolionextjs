@@ -1,6 +1,9 @@
 {
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
+  "/project1/page": "/project1",
+  "/project2/page": "/project2",
+  "/project3/page": "/project3",
   "/sentry-example-page/page": "/sentry-example-page",
   "/page": "/"
 }

@@ -34,6 +34,24 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
+      "page": "/project1",
+      "regex": "^/project1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/project1(?:/)?$"
+    },
+    {
+      "page": "/project2",
+      "regex": "^/project2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/project2(?:/)?$"
+    },
+    {
+      "page": "/project3",
+      "regex": "^/project3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/project3(?:/)?$"
+    },
+    {
       "page": "/sentry-example-page",
       "regex": "^/sentry\\-example\\-page(?:/)?$",
       "routeKeys": {},
@@ -57,123 +75,5 @@
     "pathHeader": "x-nextjs-rewritten-path",
     "queryHeader": "x-nextjs-rewritten-query"
   },
-  "rewrites": [
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "r",
-          "value": "(?<region>[a-z]{2})"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.:region.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    },
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    },
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "r",
-          "value": "(?<region>[a-z]{2})"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.:region.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    },
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    },
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "r",
-          "value": "(?<region>[a-z]{2})"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.:region.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    },
-    {
-      "source": "/monitoring(/?)",
-      "has": [
-        {
-          "type": "query",
-          "key": "o",
-          "value": "(?<orgid>\\d*)"
-        },
-        {
-          "type": "query",
-          "key": "p",
-          "value": "(?<projectid>\\d*)"
-        }
-      ],
-      "destination": "https://o:orgid.ingest.sentry.io/api/:projectid/envelope/?hsts=0",
-      "regex": "^/monitoring(/?)(?:/)?$"
-    }
-  ]
+  "rewrites": []
 }

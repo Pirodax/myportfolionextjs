@@ -6,7 +6,6 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    
     "build": "next build",
     "cf:build": "npx opennextjs-cloudflare build",
     "deploy": "npm run cf:build && npx wrangler deploy"

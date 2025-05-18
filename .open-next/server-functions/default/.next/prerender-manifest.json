@@ -30,6 +30,54 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/project1": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/project1",
+      "dataRoute": "/project1.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/project2": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/project2",
+      "dataRoute": "/project2.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/sentry-example-page": {
       "experimentalBypassFor": [
         {
@@ -53,13 +101,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/project3": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/project3",
+      "dataRoute": "/project3.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "e43fc0faa031141d26d10e048d9385c4",
-    "previewModeSigningKey": "7fb500cfea360eb57208ec8bced55d4d749c07ae800d3f9981b34308a3845ab1",
-    "previewModeEncryptionKey": "361cf5401b576da923883a3912b3b6965b39406ae8ebc4dad837ac989a1daa4d"
+    "previewModeId": "1212faa78e801114048a2f31bf34c1d3",
+    "previewModeSigningKey": "72fed7775597277258aad0c31e47a38f2d75e9cb24e4b1837173135e9dbda9b9",
+    "previewModeEncryptionKey": "fd0b38f28bcc1403c94f1b5de3230dd831d1612ebba6c109009af91aee7f804a"
   }
 }

@@ -1,13 +1,18 @@
-name              = "bergeron"
-account_id        = "b3e152525a8f5541cb62c7f3189b8a50"
-workers_dev       = true            # ou false si vous utilisez un domaine personnalisé
-compatibility_date = "2025-05-18"   # date du jour ou postérieure
-compatibility_flags = ["nodejs_compat"]  # pour les APIs Node.js nécessaires
+name               = "bergeron"
+main               = ".open-next/worker.js"
+workers_dev        = true
+compatibility_date = "2025-05-18"
+compatibility_flags = ["nodejs_compat"]
+account_id = "b3e152525a8f5541cb62c7f3189b8a50"
 
-# point d’entrée du worker généré par OpenNext
-main = ".open-next/worker.js"
+[build]
+command   = "npm run cf:build"
+watch = "."
 
-# dossiers d’assets statiques générés par OpenNext
+[build.upload]
+format = "modules"
+main   = ".open-next/cloudflare-templates/worker.js"
+
 [assets]
 directory = ".open-next/assets"
 binding   = "ASSETS"
