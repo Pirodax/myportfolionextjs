@@ -86,7 +86,7 @@ const Projet1 = () => {
           possition='rigth'
         />
       </a>
-      <p className="md:text-base text-sm md:font-normal font-light">
+      <p className="md:text-base text-sm md:font-normal items-center font-light">
           Copyright © 2025 Bergeron Ludovic
         </p>
     </div>
