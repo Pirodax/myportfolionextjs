@@ -11,6 +11,7 @@ import Experiences from "@/components/Experiences";
 // import MyApproach from "@/components/MyApproach";
 import Flooter from "@/components/Footer";
 export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export default function Home() {
   return (

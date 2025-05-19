@@ -84,7 +84,16 @@ No statique (dynamique)
 npm ci && npm run cf:build
 # Déployer la commande
 npx wrangler deploy
+////////////////////////////////
+# Clean up previous builds
+rm -rf .next
+rm -rf .wrangler
 
+# Install dependencies
+npm install
+
+# Build and deploy
+npm run deploy
 
 
 # revenir au git d'avant 
