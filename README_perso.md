@@ -96,6 +96,13 @@ npm install
 npm run deploy
 
 
+npm run build           # Next.js prod build
+vercel build            # simule la build Vercel
+vercel env pull .env.local  # récupère les env vars du dashboard
+vercel dev              # dev local “Vercel-like”
+vercel                  # deploy preview
+vercel --prod           # deploy production
+
 # revenir au git d'avant 
 git reset --hard HEAD
 

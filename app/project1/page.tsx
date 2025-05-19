@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import dynamic from 'next/dynamic';
-export const runtime = 'edge';
 
 // import Image from 'next/image';
 // Définir le type des props que doit accepter Spotlight

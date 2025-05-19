@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import dynamic from 'next/dynamic';
-export const runtime = 'edge';
 
  
 // Définir le type des props que doit accepter Spotlight
@@ -37,7 +36,7 @@ const Projet3= () => {
         
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
             Projet  {' '}
-            <span className="text-purple">n°1</span>
+            <span className="text-purple">n°3</span>
         </h1>
         </div>
     </div>
