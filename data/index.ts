@@ -27,7 +27,7 @@ export const gridItems = [
   },
   {// pour afficher le globe il faut row = 2*col
     id: 2,
-    title: "Je suis habitué à travailler au sein d&apos;équipes multiculturelles",
+    title: "Je suis habitué à travailler au sein d'équipes multiculturelles",
     description: "faites touner ;)",
     className: [
       "lg:col-span-2 md:col-span-2",
@@ -43,7 +43,7 @@ export const gridItems = [
     {
     id: 3,
     title: "Mes langages deprogrammation",
-    description: "Je cherche sans cesse à m&apos;améliorer !",
+    description: "Je cherche sans cesse à m'améliorer !",
     className: [
       "lg:col-span-3 md:col-span-3",
       "lg:col-start-1 md:col-start-1",
