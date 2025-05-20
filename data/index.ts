@@ -103,10 +103,10 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Simulation d'une ruche d'abeilles en C",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    title: "Mon Portfolio professionnel, Next.js",
+    des: "Découvrez mon portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.",
+    img: "/img1_project_web.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/cloudfare.png", "/vercel.png","/sentry.png"],
     link: "/projet1",
   },
   {

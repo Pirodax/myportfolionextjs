@@ -5,12 +5,12 @@ import Image from 'next/image'
 import "../globals.css";
 import MagicButton from '../../components/ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
-// Définir le type des props que doit accepter Spotlight
+
+
 interface SpotlightProps {
   className?: string;
   fill?: string;
 }
-// Import dynamique de Spotlight, sans SSR
 const SpotlightNoSSR = dynamic<SpotlightProps>(
   () => import('../../components/ui/Spotlight').then((mod) => mod.Spotlight),
   { ssr: false }
@@ -108,32 +108,37 @@ const Project1 = () => {
       </div>
       {/* 3 images en format portrait */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
+      
         <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-        <Image
-          src="/img1_project_web.png"
-          alt="Portrait 1"
-          className="object-cover hover:scale-105 transition-transform duration-300"
-          fill
-        />
+          <Image
+            src="/img2_project_web.png"
+            alt="Portrait 1"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+            fill
+          />
+          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple">Développement</h2>
+        </div>
+
+        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+          <Image
+            src="/img3_project_web.png"
+            alt="Portrait 2"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+            fill
+          />
+          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple">Déploiement</h2>
         </div>
         <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-        <Image
-          src="/img1_project_web.png"
-          alt="Portrait 2"
-          className="object-cover hover:scale-105 transition-transform duration-300"
-          fill
-        />
-        </div>
-        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-        <Image
-          src="/img1_project_web.png"
-          alt="Portrait 3"
-          className="object-cover hover:scale-105 transition-transform duration-300"
-          fill
-        />
+          <Image
+            src="/img4_project_web.png"
+            alt="Portrait 3"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+            fill
+          />
+          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple-500">Feedback</h2>
         </div>
       </div>
-      <a className="flex justify-center mx-auto" href="https://github.com/Pirodax/myportfolionextjs">
+      <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
         <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" />
       </a>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
