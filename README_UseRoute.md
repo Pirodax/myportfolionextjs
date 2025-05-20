@@ -1,5 +1,9 @@
 # Utilisation de useRoute
 
+# redirection des page j'utilese useRouter 
+voirs doc:
+https://nextjs.org/docs/pages/api-reference/functions/use-router
+
 ## Voici un exemple complet :
 
 ActiveLink qui accepte n’importe quel enfant (ici une image).

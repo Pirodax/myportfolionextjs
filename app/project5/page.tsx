@@ -16,9 +16,9 @@ const SpotlightNoSSR = dynamic<SpotlightProps>(
   { ssr: false }
 );
 
-const Project3 = () => {
+const Project5 = () => {
   return (
-    <div className="relative py-20 mb-[100px] pt-36 no-caret overflow-x-hidden" id="Project3">
+    <div className="relative py-20 mb-[100px] pt-36 no-caret overflow-x-hidden" id="Project5">
       <div>
         <SpotlightNoSSR
         className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -92,4 +92,4 @@ const Project3 = () => {
   )
 }
 
-export default Project3
+export default Project5

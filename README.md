@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Next.js
 
-## Getting Started
+Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table des matières
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Description du projet](#description-du-projet)  
+- [Technologies principales](#technologies-principales)  
+  - [Framework](#framework)  
+  - [Langage](#langage)  
+  - [Styling](#styling)  
+  - [Composants et Animations](#composants-et-animations)  
+  - [Outils de développement](#outils-de-développement)  
+- [Fonctionnalités notables](#fonctionnalités-notables)  
+- [Structure du projet](#structure-du-projet)  
+- [Monitoring et qualité](#monitoring-et-qualité)  
+- [Déploiement](#déploiement)  
+- [Installation et démarrage](#installation-et-démarrage)  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Description du projet
 
-## Learn More
+Ce projet est un portfolio professionnel moderne, pensé pour mettre en valeur vos réalisations à travers :
 
-To learn more about Next.js, take a look at the following resources:
+- Un design responsive optimisé pour tous les écrans  
+- Des effets visuels avancés (spotlight, animations au survol…)  
+- Une expérience utilisateur fluide et performante  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies principales
 
-## Deploy on Vercel
+### Framework
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 14 (React)**  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Langage
+
+- **TypeScript**  
+
+### Styling
+
+- **Tailwind CSS**  
+- CSS Modules  
+- CSS Grid & Flexbox  
+
+### Composants et Animations
+
+- **Custom Spotlight effect**  
+- **MagicButton component**  
+- Imports dynamiques (Dynamic Imports)  
+- Animations au survol (Hover animations)  
+- Images responsives avec `next/image`  
+
+### Outils de développement
+
+- **ESLint**  
+- PostCSS  
+- Configuration TypeScript (`tsconfig.json`)  
+- **Sentry** (monitoring d’erreurs)  
+
+---
+
+## Fonctionnalités notables
+
+- Design entièrement **responsive**  
+- **Effets de spotlight** dynamiques  
+- **Animations fluides** et interactives  
+- **Optimisation des images** pour un chargement rapide  
+- **Mode sombre / clair**  
+- **Grid layout** adaptatif  
+- **Routing dynamique** (pages et sections générées à la volée)  
+
+---
+
+## Structure du projet
+

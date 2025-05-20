@@ -16,83 +16,132 @@ const SpotlightNoSSR = dynamic<SpotlightProps>(
   { ssr: false }
 );
 
-const Projet1 = () => {
+const Project1 = () => {
   return (
-    <div className ="py-20 mb-[100px] pt-36 no-caret " id="Projet1">
-        
+    <div className="relative py-20 mb-[100px] pt-36 no-caret overflow-x-hidden" id="Project1">
       <div>
-      <SpotlightNoSSR
+        <SpotlightNoSSR
         className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
         fill="white"
-      />
-      <SpotlightNoSSR
+        />
+        <SpotlightNoSSR
         className="h-[80vh] w-[50vw] top-10 left-full"
         fill="purple"
-      />
-      <SpotlightNoSSR className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+        />
+        <SpotlightNoSSR
+        className="left-80 top-28 h-[80vh] w-[50vw]"
+        fill="blue"
+        />
       </div>
       {/* Background gradient for the container */}
-      
       <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-          Projet  {' '}
-          <span className="text-purple">n°1</span>
+        Project{' '}
+        <span className="text-purple">n°1</span>
       </h1>
       <div className="flex justify-center mx-auto">
-        <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">          <Image
-              src="/img1_project_web.png"
-              alt="/img_projet_web"
-              className="z-10"
-              width={2500} // ajustez selon vos besoins
-              height={1500} // ajustez selon vos besoins
-              priority
-          />
-        </div>  
+        <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
+        <Image
+          src="/img1_project_web.png"
+          alt="/img_Project_web"
+          className="z-10"
+          width={2500} // ajustez selon vos besoins
+          height={1500} // ajustez selon vos besoins
+          priority
+        />
+        </div>
       </div>
+            <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
+          Portfolio Next.js - Vue d'ensemble
+        </h2>
         
-          <p className="text-white-200 md:mt-10 my-5 text-center text-xl">
-            « Prenons rendez-vous à votre convenance pour échanger sur vos besoins et explorer ensemble les opportunités de collaboration. »
+        <div className="space-y-6 text-white-200">
+          <p className="text-lg text-center">
+            Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
           </p>
-          {/* 3 images en format portrait */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
-            <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-              <Image
-                src="/img1_project_web.png"
-                alt="Portrait 1"
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                fill
-              />
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-purple">Technologies principales</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Next.js 14 (React)</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>CSS Modules</li>
+              </ul>
             </div>
-            <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-              <Image
-                src="/img1_project_web.png"
-                alt="Portrait 2"
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                fill
-              />
-            </div>
-            <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-              <Image
-                src="/img1_project_web.png"
-                alt="Portrait 3"
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                fill
-              />
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-purple">Composants et Animations</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Custom Spotlight effect</li>
+                <li>MagicButton component</li>
+                <li>Dynamic imports</li>
+                <li>Hover animations</li>
+              </ul>
             </div>
           </div>
-      <a className='flex justify-center mx-auto' href="mailto:bergeron@et.esiea.fr">
-        <MagicButton
-          title="Voir code source"
-          icon={<FaLocationArrow/>}
-          possition='rigth'
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-purple">Outils de développement</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>ESLint</li>
+                <li>PostCSS</li>
+                <li>TypeScript Config</li>
+                <li>Sentry (monitoring d'erreurs)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-purple">Déploiement</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Cloudflare Pages</li>
+                <li>Vercel (configuration alternative)</li>
+                <li>Optimisation des images</li>
+                <li>Routing dynamique</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* 3 images en format portrait */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
+        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+        <Image
+          src="/img1_project_web.png"
+          alt="Portrait 1"
+          className="object-cover hover:scale-105 transition-transform duration-300"
+          fill
         />
+        </div>
+        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+        <Image
+          src="/img1_project_web.png"
+          alt="Portrait 2"
+          className="object-cover hover:scale-105 transition-transform duration-300"
+          fill
+        />
+        </div>
+        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+        <Image
+          src="/img1_project_web.png"
+          alt="Portrait 3"
+          className="object-cover hover:scale-105 transition-transform duration-300"
+          fill
+        />
+        </div>
+      </div>
+      <a className="flex justify-center mx-auto" href="https://github.com/Pirodax/myportfolionextjs">
+        <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" />
       </a>
-      <p className="md:text-base text-sm md:font-normal items-center font-light">
-          Copyright © 2025 Bergeron Ludovic
-        </p>
+      <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
+        Copyright © 2025 Bergeron Ludovic
+      </p>
     </div>
         
     
   )
 }
 
-export default Projet1
+export default Project1

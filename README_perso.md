@@ -2,22 +2,11 @@
 this is my portfolio the good one 
 
 # Note 
-On est le 03/05/25 et je m'engage à avoir un site fonctionnelle pour demain ou je serais moi Ludovic BERGERON une grosse dinde 07/05/2025(embiteux mais pour ce weekend tkt)
+...
 
 
 # Video tutoriel utilisé:
 https://www.youtube.com/watch?v=FTH6Dn3AyIQ&ab_channel=JavaScriptMastery
-
-21:46 sur 2:44:25 J1
-44:10 sur 2:44:25 J2
-1:08:31 sur 2:44:25 J3
-x J4
-1:35:49 sur 2:44:25 J5
-1:50:15 sur 2:44:25 J6 Gros probleme avec SENTRY globall css ?
-2:05:42 sur 2:44:25 J7 plus de problemes 
-x J8
-fini  sur 2:44:25 J9
-passe au deployment !!!!!!
 
 # liens pour tous les contents:
 https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
@@ -107,9 +96,4 @@ vercel --prod           # deploy production
 git reset --hard HEAD
 
 
-soit reparer le build soit ignorer les messages d'erreurs
 
-
-# redirection des page j'utilese useRouter 
-voirs doc:
-https://nextjs.org/docs/pages/api-reference/functions/use-router

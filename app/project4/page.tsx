@@ -16,9 +16,9 @@ const SpotlightNoSSR = dynamic<SpotlightProps>(
   { ssr: false }
 );
 
-const Project3 = () => {
+const Project4 = () => {
   return (
-    <div className="relative py-20 mb-[100px] pt-36 no-caret overflow-x-hidden" id="Project3">
+    <div className="relative py-20 mb-[100px] pt-36 no-caret overflow-x-hidden" id="Project2">
       <div>
         <SpotlightNoSSR
         className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -35,8 +35,8 @@ const Project3 = () => {
       </div>
       {/* Background gradient for the container */}
       <h1 className="heading text-3xl md:text-5xl font-bold text-center mb-10">
-        Project{' '}
-        <span className="text-purple">n°3</span>
+        Projet{' '}
+        <span className="text-purple">n°2</span>
       </h1>
       <div className="flex justify-center mx-auto mt-8">
         <div className="relative flex items-center gap-6 rounded-md justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
@@ -92,4 +92,4 @@ const Project3 = () => {
   )
 }
 
-export default Project3
+export default Project4
