@@ -50,7 +50,7 @@ const Project1 = () => {
         />
         </div>
       </div>
-            <div className="max-w-4xl mx-auto px-4">
+       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
           Portfolio Next.js - Vue d'ensemble
         </h2>
@@ -60,9 +60,9 @@ const Project1 = () => {
             Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Technologies principales</h3>
+            <div className="grid md:grid-cols-2 gap-8 ml-30">
+            <div >
+              <h3 className="text-xl font-semibold mb-6 text-purple">Technologies principales</h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Next.js 14 (React)</li>
                 <li>TypeScript</li>
@@ -82,7 +82,7 @@ const Project1 = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 ml-30">
             <div>
               <h3 className="text-xl font-semibold mb-3 text-purple">Outils de développement</h3>
               <ul className="list-disc pl-5 space-y-2">
