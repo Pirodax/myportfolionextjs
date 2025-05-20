@@ -52,7 +52,7 @@ const Project1 = () => {
       </div>
        <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
-          Portfolio Next.js - Vue d'ensemble
+          Portfolio Next.js - Vue d&apos;ensemble
         </h2>
         
         <div className="space-y-6 text-white-200">
@@ -89,7 +89,7 @@ const Project1 = () => {
                 <li>ESLint</li>
                 <li>PostCSS</li>
                 <li>TypeScript Config</li>
-                <li>Sentry (monitoring d'erreurs)</li>
+                <li>Sentry (monitoring d&apos;erreurs)</li>
               </ul>
             </div>
 
