@@ -60,9 +60,9 @@ const Project1 = () => {
             Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
           </p>
 
-            <div className="grid md:grid-cols-2 gap-8 ml-30">
-            <div >
-              <h3 className="text-xl font-semibold mb-6 text-purple">Technologies principales</h3>
+          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
+            <div>
+              <h3 className="text-xl font-semibold mb-3  text-purple">Technologies Principales</h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Next.js 14 (React)</li>
                 <li>TypeScript</li>
@@ -82,9 +82,10 @@ const Project1 = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 ml-30">
+         
+          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Outils de développement</h3>
+              <h3 className="text-xl font-semibold mb-3  text-purple">Outils de développement</h3>
               <ul className="list-disc pl-5 space-y-2">
                 <li>ESLint</li>
                 <li>PostCSS</li>
