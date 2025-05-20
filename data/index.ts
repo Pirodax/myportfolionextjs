@@ -28,7 +28,7 @@ export const gridItems = [
   {// pour afficher le globe il faut row = 2*col
     id: 2,
     title: "Je suis habitué à travailler au sein d'équipes multiculturelles",
-    description: "faites touner ;)",
+    description: "Échange universitaire de six mois à Taïwan",
     className: [
       "lg:col-span-2 md:col-span-2",
       "lg:col-start-5 md:col-start-5",
@@ -106,7 +106,7 @@ export const projects = [
     title: "Mon Portfolio professionnel, Next.js",
     des: "Découvrez mon portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.",
     img: "/img1_project_web.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/cloudfare.png", "/vercel.png","/sentry.png"],
+    iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/cloudfare.png", "/vercel.png","/sentry.png"],
     link: "/projet1",
   },
   {
@@ -213,31 +213,31 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    desc: "Conception et développement d'applications web et Android statiques et dynamiques avec Next.js et Android Studio.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Elocance",
+    desc: "Gestion d'équipe et aisance à l'oral; lauréat du prix « Coup de cœur » deux années consécutives au sein de mon école.",
+    className: "md:col-span-2", 
     thumbnail: "/exp3.svg",
   },
   {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    id: 3,
+    title: "githube",
+    desc: "Bonne utilisation d'outils de gestion de versions, tels que GitHub et GitLab.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
+  //  {
+  //   id: 2,
+  //   title: "Mobile App Dev ",
+  //   desc: "Dévelopement Algoritme  .",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "/exp2.svg",
+  // },
 ];
 
 export const socialMedia = [

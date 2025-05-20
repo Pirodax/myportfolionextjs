@@ -8,13 +8,6 @@ this is my portfolio the good one
 # Video tutoriel utilisé:
 https://www.youtube.com/watch?v=FTH6Dn3AyIQ&ab_channel=JavaScriptMastery
 
-# liens pour tous les contents:
-https://jsmastery.pro/module/build-an-amazing-modern-portfolio-with-next-js-and-framer-motion/introduction-spotlight
-
-# liens dirrect vers le github 
-https://github.com/adrianhajdin/portfolio
-
-
 # liens vers les outils :
 
 ## Aceternity UI

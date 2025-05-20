@@ -6,9 +6,9 @@ const Experiences = () => {
   return (
     <div className="py-20" id="testimonials">
       <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-        Mon <span className="text-purple">expérience de travail</span>
+        Mes <span className="text-purple">Compétences</span>
       </h1>
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full mt-12 grid  grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <BorderBeamButtonF
             key={card.id}
