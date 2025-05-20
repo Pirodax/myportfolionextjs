@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
-
+import  ContactButtonFix   from '@/components/ContactButtonFix'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ludovic Portfolio",
-  description: "No lazzy guy here, just cofee developer",
+  description: "🚀 Prêt à relever de nouveaux défis en alternance ! 🚀",
 };
 
 export default function RootLayout({
@@ -37,7 +37,9 @@ export default function RootLayout({
             enableColorScheme       
             disableTransitionOnChange
           >
+
             {children}
+            <ContactButtonFix/>
           </ThemeProvider>
         </body>
     </html>
