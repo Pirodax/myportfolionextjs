@@ -13,3 +13,4 @@ export function cn(...inputs: ClassValue[]) {
 // for 3D pin
 // for Infinite Moving Cards
 // MovingBorders 
+// for Apple Cards Carousel

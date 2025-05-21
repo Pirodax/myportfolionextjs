@@ -9,6 +9,7 @@ import MagicButton from "./MagicButton";
 import { IoCopyOutline } from 'react-icons/io5';
 import dynamic from "next/dynamic";// tester si mieux
 import Image from 'next/image'; 
+import { FaDownload } from "react-icons/fa6";
 
 export const BentoGrid = ({
   className,
@@ -29,6 +30,15 @@ export const BentoGrid = ({
       {children}
     </div>
   );
+};
+const handleDownloadCV = () => {
+  // Créer un lien temporaire
+  const link = document.createElement('a');
+  link.href = '/CV_Ludovic_BERGERON.pdf'; // Assurez-vous que le PDF est dans le dossier public
+  link.download = 'CV-Ludovic-BERGERON.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 
 export const BentoGridItem = ({
@@ -55,7 +65,7 @@ export const BentoGridItem = ({
 
 }) => {
   const [copied , setCopied] = useState(false);
-
+  const [showCV, setShowCV] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText('bergeron@et.esiea.fr');
 
@@ -154,31 +164,99 @@ export const BentoGridItem = ({
             </div>
           </div>
         )}
-        {id === 6 &&(
-          <div className = "mt-5 relative">
-            <div className = "absolute -bottom-5 right-0">
-              <Lottie 
-                loop={copied}
-                autoplay={copied}
-                animationData={animationData}
-                rendererSettings={{
-                  preserveAspectRatio: "xMidYMid slice",
-                }}
-              />
-            </div>
-            <MagicButton 
-              title={copied ?'Email Copié' : 'Copier mon email'}
-              icon={<IoCopyOutline />}
-              possition="left"
-              otherClasses ="!bg-[#161a31]"
-              handleclick={handleCopy}
-              />
+
+        {id === 5 && (
+        <div 
+          className="w-full h-full cursor-pointer relative overflow-hidden group" 
+          onClick={() => setShowCV(true)}
+        >
+          <div className="text-center text-2xl font-bold mb-4">Mon CV</div>
+          <p className="text-center text-m text-neutral-300 mb-4">Cliquer pour inspecter</p>
+          <div className="relative w-full overflow-hidden">
+            <Image
+              src="/CV-Preview.png"
+              alt="CV Preview"
+              width={595}
+              height={800}
+              className="mx-auto rounded-lg filter brightness-[0.7] blur-[1.5px] group-hover:blur-[0.5px] group-hover:brightness-[0.8] transition-all duration-3000 scale-110 transform -translate-y-10"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent" />
           </div>
-        )}  
-        
-         
         </div>
-      </div>
+       )}
+        
+        
+      
+
+        {/* Modal CV qui s'affiche par-dessus */}
+        {showCV && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div className="relative w-full h-full max-w-5xl mx-auto p-4 flex items-center justify-center">
+              <div className="relative w-full bg-[#0A0A0A] rounded-[2.5rem] p-8 shadow-2xl">
+                <button
+                  onClick={() => setShowCV(false)}
+                  className="absolute -top-4 -right-4 z-[101] w-10 h-10 rounded-full bg-purple-400 text-white hover:bg-purple-400 transition-all duration-300 shadow-lg flex items-center justify-center group"
+                >
+                  <span className="transform group-hover:rotate-90 transition-transform duration-300">
+                  ✕
+                  </span>
+                </button>
+
+                <div className="flex flex-col items-center gap-6 relative z-[99]">
+                  <h2 className="text-2xl md:text-4xl font-bold text-neutral-200 font-sans mt-2">
+                    Mon CV
+                  </h2>
+                  
+                  <MagicButton 
+                    title="Télécharger CV" 
+                    icon={<FaDownload />}
+                    possition="right"
+                    handleclick={handleDownloadCV} // pour télécharrger le cv
+                  />
+
+                  <div className="scrollbar-hide max-h-[70vh] overflow-y-auto rounded-2xl">
+                    <Image
+                      src="/CV-Preview.png"
+                      alt="CV officiel"
+                      width={595}
+                      height={842}
+                      className="mx-auto rounded-2xl shadow-2xl"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+    
+        {id === 6 &&(
+          <div className="flex flex-col items-center justify-center w-full mt-auto">
+            <div className="relative">
+              <div className="absolute -bottom-5 right-0">
+                <Lottie 
+                  loop={copied}
+                  autoplay={copied}
+                  animationData={animationData}
+                  rendererSettings={{
+                    preserveAspectRatio: "xMidYMid slice",
+                  }}
+                />
+                </div>
+                <MagicButton 
+                  title={copied ? 'Email Copié' : 'Copier mon email'}
+                  icon={<IoCopyOutline />}
+                  possition="left"
+                  otherClasses="!bg-[#161a31]"
+                  handleclick={handleCopy}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+         
+       </div>
     </div>
+    
   );
 };
