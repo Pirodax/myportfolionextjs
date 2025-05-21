@@ -24,6 +24,7 @@ export default function Home() {
         <Experiences/>
         {/* <MyApproach/> */}
         <Flooter/>
+        <div id="modal-root"/>
       </div>
     </main>
   );

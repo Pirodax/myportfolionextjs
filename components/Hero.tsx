@@ -41,8 +41,8 @@ const Hero = () => {
           className={cn(
             "absolute inset-0",
             "[background-size:20px_20px]",
-            "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-            "dark:[background-image:radial-gradient(rgba(64,64,64,0.8)_1px,transparent_1px)]",//transparence (0.x)
+            // "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+            "[background-image:radial-gradient(rgba(64,64,64,0.8)_1px,transparent_1px)]",//transparence (0.x)
             
           )}
           />

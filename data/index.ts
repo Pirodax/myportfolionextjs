@@ -93,38 +93,31 @@ export const projects = [
     iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/cloudfare.png", "/vercel.png","/sentry.png"],
     link: "/projet1",
   },
-  {
+   {
     id: 2,
-    title: "My Portfolio créé avec Next.js et Tailwind CSS",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: 3,
-    title: "jeu 2D - GameMaker Studio",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
     title: "Reseau social - Next.js et Tailwind CSS",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
   },
-  {
-    id: 5,
-    title: "Design Logo - Figma",
-    des: "Logo design project using Figma, showcasing creativity and design skills.",
-    img: "/b5.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
+  // {
+  //   id: 4,
+  //   title: "jeu 2D - GameMaker Studio",
+  //   des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+  //   img: "/p3.svg",
+  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+  //   link: "/ui.aiimg.com",
+  // },
+
+  // {
+  //   id: 5,
+  //   title: "Design Logo - Figma",
+  //   des: "Logo design project using Figma, showcasing creativity and design skills.",
+  //   img: "/b5.svg",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+  //   link: "/ui.apple.com",
+  // },
 ];
 
 export const testimonials = [

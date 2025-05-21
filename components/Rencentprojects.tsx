@@ -12,8 +12,8 @@ const Rencentprojects = () => {
   return (
     <div className="py-20" id="projects">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-            Petite selection de {' '}
-            <span className="text-purple">mes projets recents</span>
+            Petite sélection de {' '}
+            <span className="text-purple">mes projets récents</span>
         </h1>
             
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 p-4">

@@ -10,6 +10,8 @@ import { IoCopyOutline } from 'react-icons/io5';
 import dynamic from "next/dynamic";// tester si mieux
 import Image from 'next/image'; 
 import { FaDownload } from "react-icons/fa6";
+import { ModalPortal } from './ModalPortal';
+
 
 export const BentoGrid = ({
   className,
@@ -79,6 +81,7 @@ export const BentoGridItem = ({
       className={cn(
         " group/bento overflow-hidden relative shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl transition duration-200 hover:shadow-xl  dark:shadow-none bg-border-white border border-white/10   ",
         className,
+        showCV && "overflow-visible"
       )}
       // style = color de fond des widget  
       style={{
@@ -122,7 +125,10 @@ export const BentoGridItem = ({
 
         <div className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            showCV
+              ? ""                          // ← pas de transform si le modal est ouvert
+              : "group-hover/bento:translate-x-2 transition duration-200"
           )}
         >
           <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
@@ -141,62 +147,9 @@ export const BentoGridItem = ({
           </div>
         )}
 
-        {id === 3 && (
-          <div className="flex flex-col items-center w-full">
-            <h3 className="justify-end text-xl font-bold text-white mb-6">Technologies & Langages & Langues</h3>
-            <div className="flex gap-6 lg:gap-10">
-              {/* Première colonne - Langages Backend */}
-              <div className="flex flex-col gap-3">
-                {['TypeScript', 'React', 'Tailwind'].map((item) => (
-                  <span 
-                    key={item} 
-                    className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
-                            bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
-                            border border-purple-500/20 hover:border-purple-500/40
-                            shadow-lg hover:shadow-purple-500/10"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              
-              {/* Deuxième colonne - Technologies Frontend */}
-              <div className="flex flex-col gap-3">
-                
-                  {['Python', 'Java', 'C'].map((item) => (
-                  <span 
-                    key={item} 
-                    className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
-                            bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
-                            border border-blue-500/20 hover:border-blue-500/40
-                            shadow-lg hover:shadow-blue-500/10"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+        
 
-               {/* Langues  */}
-              <div className="flex flex-col gap-3">
-                
-                  {['Français', 'Anglais', 'Chinois'].map((item) => (
-                    <span 
-                      key={item} 
-                      className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
-                        bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
-                        border border-pink-500/20 hover:border-pink-500/40
-                        shadow-lg hover:shadow-purple-500/10"
-                    >
-                      {item}
-                    </span>
-                ))}
-              </div>
-
-            </div>
-          </div>
-        )}
-
-        {id === 5 && (
+          {id === 5 && (
         <div 
           className="w-full h-full cursor-pointer relative overflow-hidden group" 
           onClick={() => setShowCV(true)}
@@ -221,44 +174,46 @@ export const BentoGridItem = ({
 
         {/* Modal CV qui s'affiche par-dessus */}
         {showCV && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="relative w-full h-full max-w-5xl mx-auto p-4 flex items-center justify-center">
-              <div className="relative w-full bg-[#0A0A0A] rounded-[2.5rem] p-8 shadow-2xl">
-                <button
-                  onClick={() => setShowCV(false)}
-                  className="absolute -top-4 -right-4 z-[101] w-10 h-10 rounded-full bg-purple-400 text-white hover:bg-purple-400 transition-all duration-300 shadow-lg flex items-center justify-center group"
-                >
-                  <span className="transform group-hover:rotate-90 transition-transform duration-300">
-                  ✕
-                  </span>
-                </button>
+          <ModalPortal>
+            <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+              <div className="relative w-full h-full max-w-5xl mx-auto p-4 flex items-center justify-center">
+                <div className="relative w-full bg-[#0A0A0A] rounded-[2.5rem] p-8 shadow-2xl">
+                  <button
+                    onClick={() => setShowCV(false)}
+                    className="absolute -top-4 -right-4 z-[101] w-10 h-10 rounded-full bg-purple-400 text-white hover:bg-purple-400 transition-all duration-300 shadow-lg flex items-center justify-center group"
+                  >
+                    <span className="transform group-hover:rotate-90 transition-transform duration-300">
+                    ✕
+                    </span>
+                  </button>
 
-                <div className="flex flex-col items-center gap-6 relative z-[99]">
-                  <h2 className="text-2xl md:text-4xl font-bold text-neutral-200 font-sans mt-2">
-                    Mon CV
-                  </h2>
-                  
-                  <MagicButton 
-                    title="Télécharger CV" 
-                    icon={<FaDownload />}
-                    possition="right"
-                    handleclick={handleDownloadCV} // pour télécharrger le cv
-                  />
-
-                  <div className="scrollbar-hide max-h-[70vh] overflow-y-auto rounded-2xl">
-                    <Image
-                      src="/CV-Preview.png"
-                      alt="CV officiel"
-                      width={595}
-                      height={842}
-                      className="mx-auto rounded-2xl shadow-2xl"
-                      priority
+                  <div className="flex flex-col items-center gap-6 relative z-[99]">
+                    <h2 className="text-2xl md:text-4xl font-bold text-neutral-200 font-sans mt-2">
+                      Mon CV
+                    </h2>
+                    
+                    <MagicButton 
+                      title="Télécharger CV" 
+                      icon={<FaDownload />}
+                      possition="right"
+                      handleclick={handleDownloadCV} // pour télécharrger le cv
                     />
+
+                    <div className="scrollbar-hide max-h-[70vh] overflow-y-auto rounded-2xl">
+                      <Image
+                        src="/CV-Preview.png"
+                        alt="CV officiel"
+                        width={595}
+                        height={842}
+                        className="mx-auto rounded-2xl shadow-2xl"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ModalPortal>
         )}
     
         {id === 6 &&(
@@ -286,7 +241,7 @@ export const BentoGridItem = ({
           )}
         </div>
          
-       </div>
+      </div>
     </div>
     
   );
