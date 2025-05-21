@@ -40,10 +40,10 @@ export const gridItems = [
     img: "",
     spareImg: "",
     },
-    {
+    {// mes langages de programations
     id: 3,
-    title: "Mes langages deprogrammation",
-    description: "Je cherche sans cesse à m'améliorer !",
+    title: "",
+    description: "",
     className: [
       "lg:col-span-3 md:col-span-3",
       "lg:col-start-1 md:col-start-1",
@@ -55,21 +55,7 @@ export const gridItems = [
     img: "",
     //spareImg: "/ui.earth.com",
   },
-  // {
-  //   id: 4,
-  //   title: "Tech enthusiast with a passion for development.",
-  //   className: [
-  //   "lg:col-span-3 md:col-span-3",
-  //   "lg:col-start-1 md:col-start-1",
-  //   "lg:row-span-0.5 md:row-span-0.5",
-  //   "lg:row-start-3 md:row-start-3",
-  //   ].join(" "),
-  //   imgClassName: "",
-  //   titleClassName: "justify-start",
-  //   img: "/grid.svg",
-  //   spareImg: "/b4.svg",
-  // },
-  {
+  {// Mon CV téléchargable 
     id: 5,
     title: "",
     description: "",

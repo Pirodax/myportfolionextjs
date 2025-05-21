@@ -142,25 +142,56 @@ export const BentoGridItem = ({
         )}
 
         {id === 3 && (
-        <div className= "flex gap-1 lg:gap-5 w-fit absolute right-3 lg:-right-2">
-            <div className = "flex flex-col gap-3 lg:gap-8">
-              {['Python','c','Java'].map
-              ((item) => (
-                <span key={item} className="py-2 lg:py4 lg:px-3 px-3 texte-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                  {item}
-                </span>
-              ))}
-              <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
-            </div>
-            <div className = "flex flex-col gap-3 lg:gap-8">
-            <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
+          <div className="flex flex-col items-center w-full">
+            <h3 className="justify-end text-xl font-bold text-white mb-6">Technologies & Langages & Langues</h3>
+            <div className="flex gap-6 lg:gap-10">
+              {/* Première colonne - Langages Backend */}
+              <div className="flex flex-col gap-3">
+                {['TypeScript', 'React', 'Tailwind'].map((item) => (
+                  <span 
+                    key={item} 
+                    className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
+                            bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
+                            border border-purple-500/20 hover:border-purple-500/40
+                            shadow-lg hover:shadow-purple-500/10"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+              
+              {/* Deuxième colonne - Technologies Frontend */}
+              <div className="flex flex-col gap-3">
+                
+                  {['Python', 'Java', 'C'].map((item) => (
+                  <span 
+                    key={item} 
+                    className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
+                            bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
+                            border border-blue-500/20 hover:border-blue-500/40
+                            shadow-lg hover:shadow-blue-500/10"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
 
-              {['Html','css','TypeScript'].map
-              ((item) => (
-                <span key={item} className="py-2 lg:py4 lg:px-3 px-3 texte-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                  {item}
-                </span>
-              ))}
+               {/* Langues  */}
+              <div className="flex flex-col gap-3">
+                
+                  {['Français', 'Anglais', 'Chinois'].map((item) => (
+                    <span 
+                      key={item} 
+                      className="py-2 px-4 text-sm lg:text-base rounded-lg text-center 
+                        bg-[#10132E] hover:bg-[#1a1f47] transition-colors duration-300
+                        border border-pink-500/20 hover:border-pink-500/40
+                        shadow-lg hover:shadow-purple-500/10"
+                    >
+                      {item}
+                    </span>
+                ))}
+              </div>
+
             </div>
           </div>
         )}
