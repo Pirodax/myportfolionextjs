@@ -36,7 +36,7 @@ export const BentoGrid = ({
 const handleDownloadCV = () => {
   // Créer un lien temporaire
   const link = document.createElement('a');
-  link.href = '/CV_Ludovic_BERGERON.pdf'; // Assurez-vous que le PDF est dans le dossier public
+  link.href = '/CV_Ludovic_BERGERON_last.pdf'; // Assurez-vous que le PDF est dans le dossier public
   link.download = 'CV-Ludovic-BERGERON.pdf';
   document.body.appendChild(link);
   link.click();

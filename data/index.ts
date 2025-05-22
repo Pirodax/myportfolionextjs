@@ -95,10 +95,10 @@ export const projects = [
   },
    {
     id: 2,
-    title: "Reseau social - Next.js et Tailwind CSS",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Réseau social - Next.js et Tailwind CSS",
+    des: "Découvrez cette application web et mobile qui changera le monde des réseaux sociaux à tout jamais",
+    img: "/img1_project_REMEMBER.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/starUML.png", "/figma.png", "/android-studio.png"],
     link: "/ui.apple.com",
   },
   // {
