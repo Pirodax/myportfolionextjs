@@ -87,8 +87,6 @@ const Project1 = () => {
             <div>
               <h3 className="text-xl font-semibold mb-3  text-purple">Outils de développement</h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>ESLint</li>
-                <li>PostCSS</li>
                 <li>TypeScript Config</li>
                 <li>Sentry (monitoring d&apos;erreurs)</li>
               </ul>
@@ -97,9 +95,8 @@ const Project1 = () => {
             <div>
               <h3 className="text-xl font-semibold mb-3 text-purple">Déploiement</h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Cloudflare Pages</li>
+                <li>Cloudflare</li>
                 <li>Vercel (configuration alternative)</li>
-                <li>Optimisation des images</li>
                 <li>Routing dynamique</li>
               </ul>
             </div>
