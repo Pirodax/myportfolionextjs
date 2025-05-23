@@ -123,33 +123,24 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
-    name: "Ludovic Bergeron",
-    title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
+      "Intéressé et Intéressant, Ludovic à su aller de l'avant pour aboutir sur ses projets. Bravo !",
+    name: "Emmanuel Perez",
+    title: "Professeur d'informatique à ESIEA, diplômé de l'EPITA",
+    img: "/pp_Emanuel_Perez.jpg",
+  },
+  {
+    quote:
+      "C'est un étudiant sympa, curieux, qui s'intéresse beaucoup au développement web. En plus, il parle très bien chinois 🙂",
+    name: "Zequan HUANG",
+    title: "Doctorant & Enseignant à ESIEA, Ingenieur cybersécurité, diplômé de l'Université Paris 1 Panthéon-Sorbonne",
+    img: "/pp_Zequan_HUANG.jpg",
   },
   {
     quote:
       "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
     name: "Ludovic Bergeron",
     title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
-  },
-  {
-    quote:
-      "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
-    name: "Ludovic Bergeron",
-    title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
-  },
-  {
-    quote:
-      "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
-    name: "Ludovic Bergeron",
-    title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
-  },
-  {
-    quote:
-      "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
-    name: "Ludovic Bergeron",
-    title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
+    img : "/pp_ludovic.jpg",
   },
 ];
 

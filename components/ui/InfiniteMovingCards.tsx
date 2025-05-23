@@ -15,6 +15,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    img : string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -23,11 +24,11 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
-
   useEffect(() => {
     addAnimation();
   }, []);
   const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -62,14 +63,26 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "10s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "20s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "40s");
       }
     }
   };
+  const handleTouchStart = () => {
+    if (scrollerRef.current) {
+      scrollerRef.current.style.animationPlayState = 'paused';
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (scrollerRef.current) {
+      scrollerRef.current.style.animationPlayState = 'running';
+    }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -80,6 +93,9 @@ export const InfiniteMovingCards = ({
     >
       <ul
         ref={scrollerRef}
+        onTouchStart={pauseOnHover ? handleTouchStart : undefined}
+        onTouchEnd={pauseOnHover ? handleTouchEnd : undefined}
+        onTouchCancel={pauseOnHover ? handleTouchEnd : undefined}
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-16 py-4",
           start && "animate-scroll",
@@ -106,7 +122,7 @@ export const InfiniteMovingCards = ({
                     <div className="relative z-20 mt-6 flex flex-row items-center">
                         <span className="flex flex-col gap-1">
                             <Image 
-                              src="/pp_ludovic.jpg" 
+                              src={item.img}
                               alt="profile" 
                               width={50}   
                               height={50} 
