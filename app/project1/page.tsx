@@ -64,7 +64,7 @@ const Project1 = () => {
             <div>
               <h3 className="text-xl font-semibold mb-3  text-purple">Technologies Principales</h3>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Next.js 14 (React)</li>
+                <li>Next.js 15 (React)</li>
                 <li>TypeScript</li>
                 <li>Tailwind CSS</li>
                 <li>CSS Modules</li>
