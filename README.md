@@ -35,7 +35,7 @@ Ce projet est un portfolio professionnel moderne, pensé pour mettre en valeur v
 
 ### Framework
 
-- **Next.js 14 (React)**  
+- **Next.js 15 (React)**  
 
 ### Langage
 
