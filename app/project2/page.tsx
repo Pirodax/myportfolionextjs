@@ -35,8 +35,8 @@ const Project2 = () => {
       </div>
       {/* Background gradient for the container */}
       <h1 className="heading text-3xl md:text-5xl font-bold text-center mb-10">
-        Project{' '}
-        <span className="text-purple">n°2</span>
+        Première place {' '}
+        <span className="text-purple">Design Sprint</span>
       </h1>
       <div className="flex justify-center mx-auto mt-8">
         <div className="relative flex items-center gap-6 rounded-md justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
@@ -51,7 +51,7 @@ const Project2 = () => {
         </div>
       </div>
       <p className="text-white-200 md:mt-10 my-5 text-center text-xl">
-        « Cette page est en maintenance, elle sera bientôt réparée. »     
+        « Cette page est en construction, elle sera bientôt mise à jour. »     
       </p>
       {/* 3 images en format portrait */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
@@ -81,7 +81,7 @@ const Project2 = () => {
         </div>
       </div>
       <a className="flex justify-center mx-auto" href="https://github.com/Pirodax/myportfolionextjs">
-        <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" />
+        <MagicButton title="Voir le poste LinkedIn" icon={<FaLocationArrow />} possition="rigth" />
       </a>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic

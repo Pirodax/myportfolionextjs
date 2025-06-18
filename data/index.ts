@@ -137,6 +137,13 @@ export const testimonials = [
   },
   {
     quote:
+      "Un étudiant sérieux, agréable et autonome, démontrant une solide capacité de travail. Il a suivi mes cours de Python avec assiduité, et ce fut un réel plaisir de l'accompagner dans sa progression.",
+    name: "Antoine LEBLANC",
+    title: "Ingénieur en Intelligence Artificielle & Enseignant à ESIEA, diplômé de l'Université IMT Mines Albi, certificat en intelligence artificelle à Polytechnique Montréal",
+    img : "/pp_Antoine_LEBLANC.jpg",
+  },
+  {
+    quote:
       "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
     name: "Ludovic Bergeron",
     title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",

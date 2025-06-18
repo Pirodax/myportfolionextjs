@@ -135,8 +135,10 @@ const Project1 = () => {
           <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple-500">Feedback</h2>
         </div>
       </div>
+      {/* target="_blank" */}
+      
       <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
-        <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" />
+        <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" /> 
       </a>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic

@@ -8,14 +8,14 @@ const Clients = () => {
     <div className ="py-20" id="testimonials">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
             Petits mots de {' '}
-            <span className="text-purple">mes colaborateurs</span>
+            <span className="text-purple">mes professeurs</span>
         </h1>
             
         <div className = "flex flex-col items-cente max-lg:mt-10">
            
             <InfiniteMovingCards
                 items={testimonials}
-                direction="right"
+                direction="left"
                 speed= "slow"
             />
             {/* <div className= "flex flex-wrap itemps-center justify-center gap-4 md:gap-16 max-lg: mt-10">
