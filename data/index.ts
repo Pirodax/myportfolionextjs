@@ -101,6 +101,14 @@ export const projects = [
     iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/vercel.png",],
     link: "/projet2",
   },
+    {
+    id: 3,
+    title: "Concours Design d'application mobile sur Figma🥇",
+    des: "Dévéloppement du prototype d'une application mobile via l'outil Figma.",
+    img: "/Projet_DesignSprint/img1_projet_DesignSprint.png",
+    iconLists: ["/figma.png",],
+    link: "/projet3",
+  },
   // {
   //   id: 4,
   //   title: "jeu 2D - GameMaker Studio",

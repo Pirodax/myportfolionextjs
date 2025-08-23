@@ -5,6 +5,7 @@ import Image from 'next/image'
 import "../globals.css";
 import MagicButton from '../../components/ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
+import Link from 'next/link';
 
 
 interface SpotlightProps {
@@ -36,108 +37,90 @@ const Project3 = () => {
       {/* Background gradient for the container */}
       <h1 className="heading text-3xl md:text-5xl font-bold text-center">
         Project{' '}
-        <span className="text-purple">n°1</span>
+        <span className="text-purple">n°3</span>
       </h1>
       <div className="flex justify-center mx-auto">
         <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
-        <Image
-          src="/img1_project_web.png"
+        <Image // image de présentation
+          src="/Projet_DesignSprint/img3_projet_DesignSprint.jpg"
           alt="/img_Project_web"
           className="z-10"
-          width={2500} // ajustez selon vos besoins
-          height={1500} // ajustez selon vos besoins
+          width={2500} 
+          height={1500} 
           priority
         />
         </div>
       </div>
-       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
-          Portfolio Next.js - Vue d&apos;ensemble
-        </h2>
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
+            Portfolio Next.js - Vue d&apos;ensemble
+          </h2>
         
-        <div className="space-y-6 text-white-200">
-          <p className="text-lg text-center">
-            Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
-          </p>
+          <div className="space-y-6 text-white mt-10">
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              🥇 J&apos;ai eu la chance de remporter la <strong>première place</strong> lors du concours 
+              <em>Design Sprint (RSE)</em> organisé par mon école <strong>ESIEA</strong>, avec mon équipe. 
+              Le défi consistait à imaginer et réaliser une interface web ou mobile pour accompagner 
+              l&apos;outil <em>SurusConnect</em>, destiné aux agriculteurs, afin de faciliter le déclenchement 
+              d&apos;alertes et l&apos;accès aux informations nécessaires en cas d&apos;incident de travail.
+            </p>
 
-          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
-            <div>
-              <h3 className="text-xl font-semibold mb-3  text-purple">Technologies Principales</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Next.js 15 (React)</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>CSS Modules</li>
-              </ul>
-            </div>
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Le concours s&apos;est déroulé sur une semaine, structurée en 5 étapes clés : 
+              compréhension du besoin, divergence et storyboard, prototypage sur <strong>Figma</strong>, 
+              tests utilisateurs et ajustements, puis soutenance finale devant le jury. 
+              Cette méthodologie nous a permis de développer rapidement une solution concrète et adaptée 
+              au contexte des agriculteurs.
+            </p>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Composants et Animations</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Custom Spotlight effect</li>
-                <li>MagicButton component</li>
-                <li>Dynamic imports</li>
-                <li>Hover animations</li>
-              </ul>
-            </div>
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Ce projet m&apos;a permis de renforcer mes compétences en <strong>UX/UI design</strong>, 
+              en <strong>travail d&apos;équipe</strong>, et en <strong>méthodologie Design Sprint</strong>. 
+              Je suis particulièrement fier de ce résultat car il représente ma capacité à collaborer 
+              efficacement et à transformer une problématique complexe en une interface intuitive.
+            </p>
           </div>
-
-         
-          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
-            <div>
-              <h3 className="text-xl font-semibold mb-3  text-purple">Outils de développement</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>TypeScript Config</li>
-                <li>Sentry (monitoring d&apos;erreurs)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Déploiement</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Cloudflare</li>
-                <li>Vercel (configuration alternative)</li>
-                <li>Routing dynamique</li>
-              </ul>
-            </div>
-          </div>
+          <a className="flex justify-center mx-auto gap-8" href="https://www.figma.com/proto/GZ7HfY6ox0H46OfYEmfcwA/Design-for-good?page-id=0%3A1&node-id=30-5870&p=f&viewport=-1153%2C2728%2C0.33&t=s7LnL8z8DwFk7rme-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=30%3A5870">
+            <MagicButton title="🔗Tester le prototype" icon={<FaLocationArrow />} possition="rigth" /> 
+          </a>
         </div>
-      </div>
+        
+
       {/* 3 images en format portrait */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
-      
-        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+      <div className="flex justify-center mx-auto">
+        <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
           <Image
-            src="/img2_project_web.png"
+            src="/Projet_DesignSprint/img1_projet_DesignSprint.png"
             alt="Portrait 1"
             className="object-cover hover:scale-105 transition-transform duration-300"
             fill
           />
-          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple">Développement</h2>
-        </div>
-
-        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-          <Image
-            src="/img3_project_web.png"
-            alt="Portrait 2"
-            className="object-cover hover:scale-105 transition-transform duration-300"
-            fill
-          />
-          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple">Déploiement</h2>
-        </div>
-        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
-          <Image
-            src="/img4_project_web.png"
-            alt="Portrait 3"
-            className="object-cover hover:scale-105 transition-transform duration-300"
-            fill
-          />
-          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple-500">Feedback</h2>
+          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple-400">Tableau de bord Figma</h2>
         </div>
       </div>
-      <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
-        <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" />
+     <div className="flex flex-col  items-center justify-center mx-auto gap-8 mt-10">
+        <div className="relative flex items-center justify-center w-[360px] h-[640px]  mb-10">
+          <Image
+            src="/Projet_DesignSprint/img2_projet_DesignSprint.png"
+            alt="Portrait 2"
+            className="hover:scale-105 transition-transform duration-300"
+            width={360}
+            height={640}
+            priority
+            style={{ objectFit: 'contain' }}
+          />
+          <h2 className="absolute bottom-4 right-4 text-xl font-semibold mb-3 text-purple-400">Page d&apos;appel d&apos;urgence</h2>
+        </div>
+      </div>
+      
+      {/* target="_blank" */}
+      
+      <a className="flex justify-center mx-auto gap-8" href="https://www.linkedin.com/posts/bergeronludovic_esiea-surusconnect-figma-activity-7337104300290043905-XW90?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGKmssBzsdCp9JSXLNSlJO85wM0SKPwXKQ">
+        <MagicButton title="Poste LinkedIn" icon={<FaLocationArrow />} possition="rigth" /> 
       </a>
+      <Link className="flex justify-center mx-auto gap-8" href="/">
+        <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
+      </Link>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic
       </p>

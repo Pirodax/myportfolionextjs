@@ -45,8 +45,8 @@ const Project1 = () => {
           src="/img1_project_web.png"
           alt="/img_Project_web"
           className="z-10"
-          width={2500} // ajustez selon vos besoins
-          height={1500} // ajustez selon vos besoins
+          width={2500} 
+          height={1500} 
           priority
         />
         </div>

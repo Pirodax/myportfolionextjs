@@ -35,6 +35,7 @@ const Project2 = () => {
         />
       </div>
       {/* Background gradient for the container */}
+      
       <h1 className="heading text-3xl md:text-5xl font-bold text-center">
         Project{' '}
         <span className="text-purple">n°2</span>
@@ -45,8 +46,8 @@ const Project2 = () => {
           src="/Projet_dd_portfolio/img1_project_dd_portfolio.png"
           alt="/img_Project_dd_portfolio_presentation"
           className="z-10"
-          width={2500} // ajustez selon vos besoins
-          height={1500} // ajustez selon vos besoins
+          width={2500} 
+          height={1500} 
           priority
         />
         </div>
