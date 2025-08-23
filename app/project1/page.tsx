@@ -5,6 +5,7 @@ import Image from 'next/image'
 import "../globals.css";
 import MagicButton from '../../components/ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
+import Link from 'next/link';
 
 
 interface SpotlightProps {
@@ -75,7 +76,7 @@ const Project1 = () => {
               Côté développement, j&apos;ai configuré <strong>TypeScript</strong> pour une meilleure 
               maintenabilité et mis en place <strong>Sentry</strong> pour le monitoring des erreurs. 
               Le déploiement etait tout dabord configuré via <strong>Cloudflare</strong> puis via <strong>Vercel</strong> 
-               qui c'est révélé être plus optimisé.
+               qui c&apos;est révélé être plus optimisé.
             </p>
 
             <p className="text-lg text-center max-w-2xl mx-auto">
@@ -122,9 +123,9 @@ const Project1 = () => {
       <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
         <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" /> 
       </a>
-       <a className="flex justify-center mx-auto gap-8" href="/">
-              <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
-            </a>
+      <Link className="flex justify-center mx-auto gap-8" href="/">
+        <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
+      </Link>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic
       </p>

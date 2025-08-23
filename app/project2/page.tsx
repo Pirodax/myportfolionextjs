@@ -5,6 +5,7 @@ import Image from 'next/image'
 import "../globals.css";
 import MagicButton from '../../components/ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
+import Link from 'next/link';
 
 
 interface SpotlightProps {
@@ -149,9 +150,9 @@ const Project2 = () => {
 
       {/* target="_blank" */}
       
-      <a className="flex justify-center mx-auto gap-8" href="/">
+      <Link className="flex justify-center mx-auto gap-8" href="/">
         <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
-      </a>
+      </Link>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic
       </p>
