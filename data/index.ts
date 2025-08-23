@@ -95,11 +95,11 @@ export const projects = [
   },
    {
     id: 2,
-    title: "Réseau social - Next.js et Tailwind CSS",
-    des: "Découvrez cette application web et mobile qui changera le monde des réseaux sociaux à tout jamais",
-    img: "/img1_project_REMEMBER.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/starUML.png", "/figma.png", "/android-studio.png"],
-    link: "/ui.apple.com",
+    title: "Site de vitrine Deedee DORZEE - Next.js TypeScript",
+    des: "Un site web de type portfolio regroupant les travaux photographiques et la biographie de Deedee Dorzée, développé avec Next.js et TypeScript.",
+    img: "/Projet_dd_portfolio/img1_project_dd_portfolio.png",
+    iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/vercel.png",],
+    link: "/projet2",
   },
   // {
   //   id: 4,
@@ -141,13 +141,6 @@ export const testimonials = [
     name: "Antoine LEBLANC",
     title: "Ingénieur en Intelligence Artificielle & Enseignant à ESIEA, diplômé de l'Université IMT Mines Albi, certificat en intelligence artificelle à Polytechnique Montréal",
     img : "/pp_Antoine_LEBLANC.jpg",
-  },
-  {
-    quote:
-      "Soyez un des premiers à laisser un commentaire! Envoyez-moi un message privé et j'ajouterai votre contribution par la suite 😉",
-    name: "Ludovic Bergeron",
-    title: "Étudiant en cycle d'ingénieur à l'Esiea (3ème année) ",
-    img : "/pp_ludovic.jpg",
   },
 ];
 
