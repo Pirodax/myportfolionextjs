@@ -149,7 +149,7 @@ const Project2 = () => {
 
       {/* target="_blank" */}
       
-      <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
+      <a className="flex justify-center mx-auto gap-8" href="/">
         <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
       </a>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">

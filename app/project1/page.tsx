@@ -50,59 +50,41 @@ const Project1 = () => {
         />
         </div>
       </div>
-       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
-          Portfolio Next.js - Vue d&apos;ensemble
-        </h2>
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
+            Portfolio Next.js - Vue d&apos;ensemble
+          </h2>
         
-        <div className="space-y-6 text-white-200">
-          <p className="text-lg text-center">
-            Un portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.
-          </p>
+          <div className="space-y-6 text-white mt-10">
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Laissez-moi vous présenter mon site vitrine personnel . 
+              Il a été conçu comme une plateforme pour présenter mon profil, mes projets et mes compétences 
+              en développement web. L&apos;objectif est de proposer une identité numérique claire, professionnelle 
+              et évolutive, tout en expérimentant avec des outils modernes du front-end.
+            </p>
 
-          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
-            <div>
-              <h3 className="text-xl font-semibold mb-3  text-purple">Technologies Principales</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Next.js 15 (React)</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>CSS Modules</li>
-              </ul>
-            </div>
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Développé avec <strong>Next.js 15</strong> et <strong>TypeScript</strong>, le site utilise 
+              <strong> Tailwind CSS</strong> pour un design épuré et 
+              entièrement responsive. J&apos;ai également intégré des composants personnalisés tels que 
+              le <em>Spotlight effect</em>, le <em>MagicButton</em>, nombreux de ses components viennent de https://ui.aceternity.com/. 
+              ainsi que des animations au survol et des imports dynamiques pour améliorer les performances.
+            </p>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Composants et Animations</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Custom Spotlight effect</li>
-                <li>MagicButton component</li>
-                <li>Dynamic imports</li>
-                <li>Hover animations</li>
-              </ul>
-            </div>
-          </div>
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Côté développement, j&apos;ai configuré <strong>TypeScript</strong> pour une meilleure 
+              maintenabilité et mis en place <strong>Sentry</strong> pour le monitoring des erreurs. 
+              Le déploiement etait tout dabord configuré via <strong>Cloudflare</strong> puis via <strong>Vercel</strong> 
+               qui c'est révélé être plus optimisé.
+            </p>
 
-         
-          <div className="grid md:grid-cols-2 gap-8 ml-20 md:ml-30">
-            <div>
-              <h3 className="text-xl font-semibold mb-3  text-purple">Outils de développement</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>TypeScript Config</li>
-                <li>Sentry (monitoring d&apos;erreurs)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-purple">Déploiement</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Cloudflare</li>
-                <li>Vercel (configuration alternative)</li>
-                <li>Routing dynamique</li>
-              </ul>
-            </div>
+            <p className="text-lg text-center max-w-2xl mx-auto">
+              Ce projet marque un jalon important dans mon parcours : il m&apos;a permis de découvrir 
+              concrètement le cycle complet de développement et de mise en production d&apos;un site web moderne.
+            </p>
           </div>
         </div>
-      </div>
+
       {/* 3 images en format portrait */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 px-4 max-w-7xl mx-auto">
       
@@ -140,6 +122,9 @@ const Project1 = () => {
       <a className="flex justify-center mx-auto gap-8" href="https://github.com/Pirodax/myportfolionextjs">
         <MagicButton title="Voir code source" icon={<FaLocationArrow />} possition="rigth" /> 
       </a>
+       <a className="flex justify-center mx-auto gap-8" href="/">
+              <MagicButton title="Retour à la page d'acceuil" icon={<FaLocationArrow />} possition="rigth" /> 
+            </a>
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
         Copyright © 2025 Bergeron Ludovic
       </p>
