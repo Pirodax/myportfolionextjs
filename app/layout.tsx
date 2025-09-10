@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider"
 import  ContactButtonFix   from '@/components/ContactButtonFix'
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
             {children}
             <ContactButtonFix/>
             <Analytics />
+            <SpeedInsights/>
           </ThemeProvider>
 
         </body>
