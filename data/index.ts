@@ -103,12 +103,22 @@ export const projects = [
   },
     {
     id: 3,
-    title: "Concours Design d'application mobile sur Figma🥇",
+    title: "Premier prix du concours Design Sprint 2025 (Figma🥇)",
     des: "Dévéloppement du prototype d'une application mobile via l'outil Figma.",
     img: "/Projet_DesignSprint/img1_projet_DesignSprint.png",
-    iconLists: ["/figma.png",],
+    iconLists: ["/figma.png"],
     link: "/projet3",
   },
+  {
+    id: 4,
+    title: "Déploiement d'une Newsletter – Bêta-testeurs Loodo",
+    des: "Automatisation des envois et gestion des abonnés avec vérification d'email, via Next.js, PostgreSQL, Prisma et une base de données Neon.",
+    img: "/Projet_newsletter_loodo/img1_project_newsletter_loodo.png",
+    iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/vercel.png","/icon_techno/neon.webp","/icon_techno/postgresql.webp","/icon_techno/prisma.png" ],
+    link: "/projet4",
+    }
+
+  
   // {
   //   id: 4,
   //   title: "jeu 2D - GameMaker Studio",
