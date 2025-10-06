@@ -233,10 +233,10 @@ export const BentoGridItem = ({
                 <div className="relative w-full bg-[#0A0A0A] rounded-[2.5rem] p-8 shadow-2xl">
                   <button
                     onClick={() => setShowCV(false)}
-                    className="absolute -top-4 -right-4 z-[101] w-10 h-10 rounded-full bg-purple-400 text-white hover:bg-purple-400 transition-all duration-300 shadow-lg flex items-center justify-center group"
+                    className="absolute top-8 right-3 md:-top-4 md:-right-4 z-[101] w-10 h-10 rounded-full bg-purple-400 text-white hover:bg-purple-400 transition-all duration-300 shadow-lg flex items-center justify-center group"
                   >
                     <span className="transform group-hover:rotate-90 transition-transform duration-300">
-                    ✕
+                      ✕
                     </span>
                   </button>
 

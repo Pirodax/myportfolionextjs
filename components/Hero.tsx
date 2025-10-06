@@ -61,7 +61,7 @@ const Hero = () => {
                 </h2>
                 <TextGenerateEffectDemo/> {/* Text animation effect  qui se trouve dans components*/}
                 <p className = "text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
-                    🚀 Prêt à relever de nouveaux défis en alternance ! 🚀
+                    🚀 Prêt à relever de nouveaux défis en entreprise ! 🚀
                 </p>
                <MagicButton
                 title="Voir mon travail"

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ludovic Portfolio",
-  description: "🚀 Prêt à relever de nouveaux défis en alternance ! 🚀",
+  description: "🚀 Prêt à relever de nouveaux défis en entreprise ! 🚀",
 };
 
 export default function RootLayout({

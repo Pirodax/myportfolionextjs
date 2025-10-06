@@ -114,7 +114,7 @@ export const projects = [
     title: "Déploiement d'une Newsletter – Bêta-testeurs Loodo",
     des: "Automatisation des envois et gestion des abonnés avec vérification d'email, via Next.js, PostgreSQL, Prisma et une base de données Neon.",
     img: "/Projet_newsletter_loodo/img1_project_newsletter_loodo.png",
-    iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/vercel.png","/icon_techno/neon.webp","/icon_techno/postgresql.webp","/icon_techno/prisma.png" ],
+    iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/vercel.png","/icon_techno/neon.webp","/icon_techno/postgresql.webp","/icon_techno/prisma.png", ],
     link: "/projet4",
     }
 
