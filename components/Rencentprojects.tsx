@@ -17,7 +17,7 @@ const Rencentprojects = () => {
         </h1>
             
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 p-4">
-            {projects.map(({id, title, des, img, iconLists, link}) => (
+            {projects.sort((a, b) => b.id - a.id).map(({id, title, des, img, iconLists, link}) => (
                 <ActiveLink href={`/project${id}`} key={id}>
                     <div className="sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]">
                         <PinContainer title={title} href={link}>
