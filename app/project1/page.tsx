@@ -42,7 +42,7 @@ const Project1 = () => {
       <div className="flex justify-center mx-auto">
         <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
         <Image
-          src="/img1_project_web.png"
+          src="/Project_web_portfolio/img1_project_web.png"
           alt="/img_Project_web"
           className="z-10"
           width={2500} 
@@ -91,7 +91,7 @@ const Project1 = () => {
       
         <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
           <Image
-            src="/img2_project_web.png"
+            src="/Project_web_portfolio/img2_project_web.png"
             alt="Portrait 1"
             className="object-cover hover:scale-105 transition-transform duration-300"
             fill
@@ -101,7 +101,7 @@ const Project1 = () => {
 
         <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
           <Image
-            src="/img3_project_web.png"
+            src="/Project_web_portfolio/img3_project_web.png"
             alt="Portrait 2"
             className="object-cover hover:scale-105 transition-transform duration-300"
             fill
@@ -110,7 +110,7 @@ const Project1 = () => {
         </div>
         <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
           <Image
-            src="/img4_project_web.png"
+            src="/Project_web_portfolio/img4_project_web.png"
             alt="Portrait 3"
             className="object-cover hover:scale-105 transition-transform duration-300"
             fill

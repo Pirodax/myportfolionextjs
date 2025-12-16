@@ -33,16 +33,55 @@ export default function GlobeDemo() {
 
 
   const sampleArcs = [
+    // Arc vers Taïwan depuis la France
     {
-      order: 2,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: 23.6978,    // latitude approximative du centre de Taïwan
-      endLng: 120.9605,   // longitude approximative du centre de Taïwan
-      arcAlt: 0.1,
-      color: "#ff0000", // couleur qui ne foncctionne pas 
-      //color: colors[Math.floor(Math.random() * (colors.length - 1))],
-
+      order: 1,
+      startLat: 48.8566,     // Paris, France
+      startLng: 2.3522,
+      endLat: 25.0330,       // Taipei, Taïwan
+      endLng: 121.5654,
+      arcAlt: 0.3,
+      color: colors[0],
+    },
+    // Arc vers l'Espagne depuis la France
+    {
+      order: 1,
+      startLat: 48.8566,     // Paris, France
+      startLng: 2.3522,
+      endLat: 40.4168,       // Madrid, Espagne
+      endLng: -3.7038,
+      arcAlt: 0.15,
+      color: colors[1],
+    },
+    // Arc vers le Japon depuis la France
+    {
+      order: 1,
+      startLat: 48.8566,     // Paris, France
+      startLng: 2.3522,
+      endLat: 35.6762,       // Tokyo, Japon
+      endLng: 139.6503,
+      arcAlt: 0.35,
+      color: colors[2],
+    },
+    // Arc vers le Maroc depuis la France
+    {
+      order: 1,
+      startLat: 48.8566,     // Paris, France
+      startLng: 2.3522,
+      endLat: 33.9716,       // Rabat, Maroc
+      endLng: -6.8498,
+      arcAlt: 0.2,
+      color: colors[0],
+    },
+    // Arc vers les États-Unis depuis la France
+    {
+      order: 1,
+      startLat: 48.8566,     // Paris, France
+      startLng: 2.3522,
+      endLat: 40.7128,       // New York, États-Unis
+      endLng: -74.0060,
+      arcAlt: 0.25,
+      color: colors[1],
     },
     {
       order: 1,

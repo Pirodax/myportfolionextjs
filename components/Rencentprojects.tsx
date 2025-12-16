@@ -9,17 +9,22 @@ import ActiveLink from './ActiveLink';
 
 
 const Rencentprojects = () => {
+  const sortedProjects = projects.sort((a, b) => b.id - a.id);
+  const isOdd = sortedProjects.length % 2 !== 0;
+
   return (
     <div className="py-20" id="projects">
         <h1 className="heading text-3xl md:text-5xl font-bold text-center">
             Petite sélection de {' '}
             <span className="text-purple">mes projets récents</span>
         </h1>
-            
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 p-4">
-            {projects.map(({id, title, des, img, iconLists, link}) => (
+            {sortedProjects.map(({id, title, des, img, iconLists, link}, index) => (
                 <ActiveLink href={`/project${id}`} key={id}>
-                    <div className="sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]">
+                    <div className={`sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw] ${
+                        isOdd && index === sortedProjects.length - 1 ? 'lg:col-span-2' : ''
+                    }`}>
                         <PinContainer title={title} href={link}>
                             <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[20vh] lg:h-[30vh] mb-10'>
                                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">

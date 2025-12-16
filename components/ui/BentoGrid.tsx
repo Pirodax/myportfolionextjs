@@ -36,8 +36,8 @@ export const BentoGrid = ({
 const handleDownloadCV = () => {
   // Créer un lien temporaire
   const link = document.createElement('a');
-  link.href = '/CV_Ludovic_BERGERON.pdf'; // Assurez-vous que le PDF est dans le dossier public
-  link.download = 'CV-Ludovic-BERGERON.pdf';
+  link.href = '/CV/CV-STAGE-2026-Ludovic-BERGERON.pdf';
+  link.download = 'CV-STAGE-2026-Ludovic-BERGERON.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -93,24 +93,21 @@ export const BentoGridItem = ({
       <div className ={`${id ===6 && 'flex justify-center'} h-full`} >
         <div className="w-full h-full absolute">
           {img && (   // image sur les widget
-            <Image 
+            <Image
               src={img}
               alt={img}
-              width={20}
-              height={20 } 
-                
+              fill
               className={cn(imgClassName, 'object-cover object-center')}
             />
           )}
         </div>
         <div className = {`absolute right-0 -bottom-5 ${id===5 && 'w-full opacity-80'}`}>
-        {spareImg && ( 
+        {spareImg && (
           <Image
               src={spareImg}
               alt={spareImg}
-              width={20}
-              height={20 } 
-              className="object-cover object-center w-full h-full"
+              fill
+              className="object-cover object-center"
             />
           )}
         </div>
@@ -211,7 +208,7 @@ export const BentoGridItem = ({
           <p className="text-center text-m text-neutral-300 mb-4">Cliquer pour inspecter</p>
           <div className="relative w-full overflow-hidden">
             <Image
-              src="/CV-Preview.png"
+              src="/CV/CV-Preview.png"
               alt="CV Preview"
               width={595}
               height={800}
@@ -254,7 +251,7 @@ export const BentoGridItem = ({
 
                     <div className="scrollbar-hide max-h-[70vh] overflow-y-auto rounded-2xl">
                       <Image
-                        src="/CV-Preview.png"
+                        src="/CV/CV-Preview.png"
                         alt="CV officiel"
                         width={595}
                         height={842}
