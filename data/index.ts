@@ -21,7 +21,7 @@ export const gridItems = [
     ].join(" "),
     imgClassName: "absolute left-0 top-0 w-full h-full object-cover ",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/Projet_DesignSprint/img3_projet_DesignSprint.jpg",
     spareImg: "",
      
   },
@@ -89,7 +89,7 @@ export const projects = [
     id: 1,
     title: "Mon Portfolio professionnel, Next.js",
     des: "Découvrez mon portfolio professionnel moderne avec des effets visuels avancés, construit comme une application web responsive.",
-    img: "/img1_project_web.png",
+    img: "/Project_web_portfolio/img1_project_web.png",
     iconLists: ["/re.svg","/next.svg", "/tail.svg", "/ts.svg", "/cloudfare.png", "/vercel.png","/sentry.png"],
     link: "/projet1",
   },
@@ -121,26 +121,26 @@ export const projects = [
     id: 5,
     title: "Mutuellia – Application mobile de simulation de remboursements santé (Projet d'équipe)",
     des: "Travail en équipe de 6 personnes en mode Agile Scrum pour développer une MVP d'application mobile. Gestion complexe de bases de données massives (tableaux de remboursement de multiples mutuelles et formules). Rôle : Tech Lead & Product Owner.",
-    img: "/placeholder-project.png",
-    iconLists: ["/icon_techno/flutter.png", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png", "/icon_techno/github.png", "/icon_techno/jira.png"],
+    img: "/Projet_Mutuellia/img0_project_mutuellia.png",
+    iconLists: ["/icon_techno/dart.png", "/icon_techno/flutter.png", "/icon_techno/android_studio.png", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png", "/icon_techno/jira.png"],
     link: "/projet5",
-  },
-  {
-    id: 6,
-    title: "Loodo – Application mobile de productivité (Projet coup de cœur)",
-    des: "Application personnelle née d'un besoin réel : améliorer ma concentration et mon organisation. Un outil que j'ai créé pour moi-même et que je souhaite maintenant partager avec le monde pour aider d'autres à mieux gérer leurs projets personnels et académiques.",
-    img: "/placeholder-project.png",
-    iconLists: ["/icon_techno/flutter.png", "/figma.png", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png"],
-    link: "/projet6",
-  },
-  {
-    id: 7,
-    title: "Sosoft – Mini CMS sur mesure (Projet professionnel)",
-    des: "Développement de sites web professionnels avec un mini CMS personnalisé pour un client réel. Gestion de contenu via interface graphique, CI/CD et déploiement automatisé. Livrable professionnel avec suivi client.",
-    img: "/placeholder-project.png",
-    iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png", "/vercel.png"],
-    link: "/projet7",
   }
+  // {
+  //   id: 6,
+  //   title: "Loodo – Application mobile de productivité (Projet coup de cœur)",
+  //   des: "Application personnelle née d'un besoin réel : améliorer ma concentration et mon organisation. Un outil que j'ai créé pour moi-même et que je souhaite maintenant partager avec le monde pour aider d'autres à mieux gérer leurs projets personnels et académiques.",
+  //   img: "/placeholder-project.png",
+  //   iconLists: ["/icon_techno/flutter.png", "/figma.png", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png"],
+  //   link: "/projet6",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Sosoft – Mini CMS sur mesure (Projet professionnel)",
+  //   des: "Développement de sites web professionnels avec un mini CMS personnalisé pour un client réel. Gestion de contenu via interface graphique, CI/CD et déploiement automatisé. Livrable professionnel avec suivi client.",
+  //   img: "/placeholder-project.png",
+  //   iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/icon_techno/postgresql.webp", "/icon_techno/supabase.png", "/vercel.png"],
+  //   link: "/projet7",
+  // }
 
 
   // {

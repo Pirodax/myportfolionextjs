@@ -26,33 +26,39 @@ const Project5 = () => {
       </div>
 
       {/* Titre */}
-      <h1 className="heading text-3xl md:text-5xl font-bold text-center">
+      <h1 className="heading text-3xl md:text-5xl font-bold text-center mb-10">
         Project <span className="text-purple">n°5</span>
       </h1>
 
-      {/* Image principale */}
-      <div className="flex justify-center mx-auto">
-        <div className="relative flex items-center justify-center sm:w-[800px] w-[90vw] overflow-hidden sm:h-[60vh] h-[40vh] lg:h-[70vh] mb-10">
-          <Image
-            src="/placeholder-project.png"
-            alt="Mutuellia App"
-            className="z-10"
-            width={2500}
-            height={1500}
-            priority
-          />
+      {/* Vidéo démo principale en format portrait */}
+      <div className="flex justify-center mx-auto mt-10 mb-32">
+        <div className="relative flex items-center justify-center w-[360px] h-[640px]">
+          <video
+            className="z-10 rounded-xl shadow-2xl"
+            width={360}
+            height={640}
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/Projet_Mutuellia/demo_1.webm" type="video/webm" />
+            <source src="/Projet_Mutuellia/demo_1.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
         </div>
       </div>
 
       {/* Texte explicatif */}
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto px-4 mt-20">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-purple mb-6">
           Mutuellia – Application de simulation de remboursements santé
         </h2>
 
         <div className="space-y-6 text-white mt-10">
           <p className="text-lg text-center max-w-2xl mx-auto">
-            <strong>Mutuellia</strong> est un projet d&apos;équipe ambitieux développé en mode <strong>Agile Scrum</strong>
+            <strong>Mutuellia</strong> est un projet d&apos;équipe ambitieux développé en mode <strong>Agile Scrum</strong> 
             avec une équipe de <strong>6 personnes</strong>. L&apos;application mobile permet aux utilisateurs de simuler
             leurs droits de remboursement santé en fonction de leur contrat de mutuelle.
           </p>
@@ -78,38 +84,49 @@ const Project5 = () => {
         </div>
       </div>
 
-      {/* Grille d'images - à compléter quand vous aurez les images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 px-4 max-w-7xl mx-auto">
-        <div className="relative flex items-center justify-center">
-          <Image
-            src="/placeholder-project.png"
-            alt="Interface Mutuellia"
-            className="hover:scale-105 transition-transform duration-300"
-            width={500}
-            height={500}
-            priority
-            style={{ objectFit: 'contain' }}
-          />
-          <h2 className="absolute bottom-4 right-2 text-xl font-semibold mb-3 text-purple-400">
-            Interface de simulation
-          </h2>
+
+      {/* 3 images en format portrait - affichées en entier */}
+      <div className="flex flex-col md:flex-row gap-8 mt-10 px-4 max-w-7xl mx-auto items-center justify-center">
+
+        <div className="relative flex flex-col items-center">
+          <div className="relative w-[280px] h-[560px] rounded-xl overflow-hidden bg-[#13162d]">
+            <Image
+              src="/Projet_Mutuellia/img2_project_mutuellia.png"
+              alt="Portrait 1"
+              className="object-contain hover:scale-105 transition-transform duration-300"
+              fill
+            />
+          </div>
+          <h2 className="mt-4 text-xl font-semibold text-purple">Completer votre profil</h2>
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <Image
-            src="/placeholder-project.png"
-            alt="Tableau de remboursement"
-            className="hover:scale-105 transition-transform duration-300"
-            width={500}
-            height={500}
-            priority
-            style={{ objectFit: 'contain' }}
-          />
-          <h2 className="absolute bottom-4 right-2 text-xl font-semibold mb-3 text-purple-700">
-            Gestion des données de remboursement
-          </h2>
+        <div className="relative flex flex-col items-center">
+          <div className="relative w-[280px] h-[560px] rounded-xl overflow-hidden bg-[#13162d]">
+            <Image
+              src="/Projet_Mutuellia/img1_project_mutuellia.png"
+              alt="Portrait 2"
+              className="object-contain hover:scale-105 transition-transform duration-300"
+              fill
+            />
+          </div>
+          <h2 className="mt-4 text-xl font-semibold text-purple">Choisir votre consultation</h2>
+        </div>
+
+        <div className="relative flex flex-col items-center">
+          <div className="relative w-[280px] h-[560px] rounded-xl overflow-hidden bg-[#13162d]">
+            <Image
+              src="/Projet_Mutuellia/img3_project_mutuellia.png"
+              alt="Portrait 3"
+              className="object-contain hover:scale-105 transition-transform duration-300"
+              fill
+            />
+          </div>
+          <h2 className="mt-4 text-xl font-semibold text-purple">Simuler votre remboursement</h2>
         </div>
       </div>
+      {/* target="_blank" */}
+      
+
 
       {/* Lien retour */}
       <Link className="flex justify-center mx-auto gap-8 mt-10" href="/">
