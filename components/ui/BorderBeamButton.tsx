@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BorderBeam } from "@stianlarsen/border-beam";
+import { BorderBeam } from "./BorderBeam";
 import { cn } from "@/lib/utils";
 
 type BorderBeamButtonF = {

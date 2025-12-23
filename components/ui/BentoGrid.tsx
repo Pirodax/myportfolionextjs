@@ -1,16 +1,19 @@
 'use client'
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-import GlobeDemo  from "./GridGlobe";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 // import Lottie from 'lottie-react';
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from 'react-icons/io5';
-import dynamic from "next/dynamic";// tester si mieux
-import Image from 'next/image'; 
+import dynamic from "next/dynamic";
+import Image from 'next/image';
 import { FaDownload } from "react-icons/fa6";
 import { ModalPortal } from './ModalPortal';
+
+const GlobeDemo = dynamic(() => import("./GridGlobe"), {
+  ssr: false,
+});
 
 
 export const BentoGrid = ({

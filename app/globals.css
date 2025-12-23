@@ -35,6 +35,13 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
+
+/* Border Beam Animation */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
   /*  Shimmer animation for the Majicbutton  */
 
 @layer utilities {

@@ -6,7 +6,18 @@ const config: Config = {
       "./components/**/*.{js,ts,jsx,tsx}",// et tes composants
     ],
     theme: {
-      extend: {},
+      extend: {
+        animation: {
+          "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        },
+        keyframes: {
+          "border-beam": {
+            "100%": {
+              "--angle": "360deg",
+            },
+          },
+        },
+      },
     },
     plugins: [],
   }
