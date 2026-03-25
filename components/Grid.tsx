@@ -1,28 +1,30 @@
+'use client'
 import React from 'react'
-// import { MdDescription } from 'react-icons/md'
-import { BentoGridItem } from './ui/BentoGrid'
-import { BentoGrid } from './ui/BentoGrid'
+import { BentoGridItem, BentoGrid } from './ui/BentoGrid'
 import { gridItems } from '@/data'
+import { useLanguage } from '@/contexts/LanguageContext'
+
 const Grid = () => {
+  const { language } = useLanguage();
+
   return (
     <section id="about">
       <div className="min-h-screen flex items-center justify-center">
-
-      <BentoGrid>
-         {gridItems.map(({id, title , description, className , img , imgClassName, titleClassName, spareImg}) => ( //gidItems est un tableau d'objets possition: data/index.ts
+        <BentoGrid>
+          {gridItems.map(({ id, title, title_en, description, description_en, className, img, imgClassName, titleClassName, spareImg }) => (
             <BentoGridItem
               id={id}
               key={id}
-              title={title}
-              description={description}
-              className={className} //size (widget) place and other
-              img={img} //img
-              imgClassName={imgClassName} //img size
-              titleClassName={titleClassName} //text size
-              spareImg={spareImg} //img
+              title={language === 'en' && title_en ? title_en : title}
+              description={language === 'en' && description_en ? description_en : description}
+              className={className}
+              img={img}
+              imgClassName={imgClassName}
+              titleClassName={titleClassName}
+              spareImg={spareImg}
             />
-         ))}
-      </BentoGrid>
+          ))}
+        </BentoGrid>
       </div>
     </section>
   )

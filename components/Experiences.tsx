@@ -1,14 +1,21 @@
+'use client'
 import React from "react";
 import { workExperience } from "@/data";
 import { BorderBeamButtonF } from "./ui/BorderBeamButton";
-import Image from 'next/image'
+import Image from 'next/image';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/data/translations";
+
 const Experiences = () => {
+  const { language } = useLanguage();
+  const t = translations[language].skills;
+
   return (
     <div className="py-20" id="testimonials">
       <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-        Mes <span className="text-purple">Compétences</span>
+        {t.heading} <span className="text-purple">{t.headingSpan}</span>
       </h1>
-      <div className="w-full mt-12 grid  grid-cols-1 gap-10">
+      <div className="w-full mt-12 grid grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <BorderBeamButtonF
             key={card.id}
@@ -25,11 +32,9 @@ const Experiences = () => {
                 className="lg:w-12 md:w-20 w-16"
               />
               <div className="lg:ms-5">
-                <h1 className="text-start text-xxl md:text-2xl font-bold">
-                  <p className="text-start text-white-100 mt-3 font-semibold">
-                    {card.desc}
-                  </p>
-                </h1>
+                <p className="text-start text-white-100 mt-3 font-semibold">
+                  {language === 'en' && card.desc_en ? card.desc_en : card.desc}
+                </p>
               </div>
             </div>
           </BorderBeamButtonF>

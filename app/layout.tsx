@@ -1,11 +1,11 @@
 
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/ThemeProvider"
-import  ContactButtonFix   from '@/components/ContactButtonFix'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import ContactButtonFix from "@/components/ContactButtonFix";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ludovic Portfolio",
-  description: "🚀 Prêt à relever de nouveaux défis en entreprise ! 🚀",
+  description: "Prêt à relever de nouveaux défis en entreprise !",
 };
 
 export default function RootLayout({
@@ -29,25 +29,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-       <ThemeProvider
+    <html lang="fr" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <LanguageProvider>
+          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
-            enableColorScheme       
+            enableColorScheme
             disableTransitionOnChange
           >
-
             {children}
-            <ContactButtonFix/>
+            <ContactButtonFix />
             <Analytics />
-            <SpeedInsights/>
+            <SpeedInsights />
           </ThemeProvider>
-
-        </body>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

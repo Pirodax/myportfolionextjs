@@ -117,7 +117,7 @@ const Project7 = () => {
       </Link>
 
       <p className="md:text-base text-sm md:font-normal font-light text-center py-40">
-        Copyright © 2025 Bergeron Ludovic
+        Copyright © 2026  Bergeron Ludovic
       </p>
     </div>
   )
