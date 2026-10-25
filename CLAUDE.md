@@ -1,102 +1,93 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-This is a personal portfolio website built with Next.js 15, React 19, TypeScript, and Tailwind CSS. The portfolio showcases projects, work experience, testimonials, and includes advanced 3D visualizations using Three.js and React Three Fiber.
+Ludovic Bergeron's personal site. The audience is **researchers in machine
+learning** who have already read his CV and clicked through out of curiosity.
+Every decision answers one question: does this make him read like someone who
+thinks like a researcher?
+
+Next.js 16, React 19, TypeScript, Tailwind CSS 4. Deployed on Vercel.
 
 ## Development Commands
 
 ```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+npm run dev     # development server
+npm run build   # production build
+npm start       # serve the production build
 ```
 
-## Architecture
+## Design system — "Signal on paper"
 
-### Data-Driven Content System
+Defined entirely in `app/globals.css`. Do not introduce colours, fonts or
+effects outside it.
 
-All portfolio content (projects, testimonials, navigation, etc.) is centralized in `/data/index.ts`. This single source of truth exports:
+- **Palette**: semantic CSS variables on `:root`, redefined under `.dark`, and
+  exposed to Tailwind through `@theme inline`. Use the utilities `bg-paper`,
+  `bg-surface`, `text-ink`, `text-ink-2`, `border-rule`, `text-trace`.
+  There is exactly **one accent** — `--trace`, the teal of a signal curve.
+- **Type**: `font-serif` is Newsreader (headings, pull quotes, the name);
+  `font-sans` is IBM Plex Sans (body, metadata, navigation). Loaded in
+  `app/layout.tsx` via `next/font/google`.
+- **Layout**: the `.doc-grid` class is the backbone — a narrow margin column
+  for dates, roles, advisors and stacks, a wide column for substance. Every
+  section uses it, which is what makes the page read as one document.
+  Content is **left-aligned**. Nothing is centred.
+- **Motion**: one orchestrated moment only — the hero trace drawing itself
+  (`.animate-trace`). No scroll reveals, no hover lifts, no gradient washes.
+  `prefers-reduced-motion` is respected.
 
-- `projects`: Project showcase cards with id, title, description, images, tech stack icons, and links
-- `testimonials`: Client/colleague recommendations
-- `navItems`: Navigation menu structure
-- `gridItems`: About section grid configuration
-- `workExperience`: Professional experience cards
-- `socialMedia`: Social media links
+Things deliberately removed, which should not come back: spotlights, the 3D
+globe, bento grids, infinite carousels, shimmer buttons, the purple accent,
+the floating contact button, centred text.
 
-**IMPORTANT**: When adding new projects:
-1. Add the project data to the `projects` array in `/data/index.ts`
-2. Projects are displayed in **descending ID order** (highest ID first) via `.sort((a, b) => b.id - a.id)` in `Rencentprojects.tsx`
-3. Create a corresponding project detail page in `/app/project{id}/page.tsx`
-4. Follow the existing project page structure (see project3 or project4 as templates)
+## Content
 
-### Component Structure
+**All content lives in `data/index.ts`.** Nothing is hard-coded in components.
 
-- `/components`: Reusable UI components
-  - `Rencentprojects.tsx`: Main project grid display
-  - `Hero.tsx`: Landing section
-  - `Footer.tsx`, `Grid.tsx`, `Experiences.tsx`, `Clients.tsx`: Other page sections
-  - `/components/ui`: Low-level UI components (buttons, effects, 3D elements)
+- `identity` — name, email, GitHub, LinkedIn, CV path
+- `hero` — headline lines, lead paragraph, what he is looking for
+- `research` — the work a researcher came to read. Newest first.
+- `featuredWork` — Sign2Speak (8), Loodo (9), clinical ML (10)
+- `projects` — older engineering projects, no longer rendered (see the comment
+  above the array); `/project1..7` still build but nothing links to them
+- `methods`, `education`, `leadership`, `testimonials`, `socialMedia`
 
-- `/app`: Next.js App Router pages
-  - `page.tsx`: Homepage
-  - `layout.tsx`: Root layout
-  - `/app/project{N}/page.tsx`: Individual project detail pages
+New content carries copy as `{ en, fr }` objects. The legacy `projects` array
+keeps the older `_en` suffix shape. `lib/i18n.ts` exports `pick()` for values
+that may be either.
 
-### Project Detail Pages Pattern
+**English is the default language**; French is available through the toggle in
+the header (`contexts/LanguageContext.tsx`, persisted in localStorage).
 
-Each project page (`/app/project{N}/page.tsx`) follows this structure:
-1. Client component with Spotlight effects (loaded dynamically with `{ ssr: false }`)
-2. Header with project number
-3. Main showcase image
-4. Text content section (max-w-4xl centered)
-5. Additional images in grid or single layouts
-6. External links via `MagicButton` component
-7. Return to homepage link
-8. Copyright footer
+## Adding a project
 
-### Tech Stack Icons
+1. Add an entry to `featuredWork` in `data/index.ts` with a new id and
+   `href: "/project{id}"`.
+2. Create `app/project{id}/page.tsx` using `ProjectArticle`
+   (see `app/project8/page.tsx` as the template).
+3. Put media in `public/Projet_{Name}/` and render it with `Figure` or
+   `Gallery` from `components/project/ProjectArticle.tsx`.
 
-Technology icons are stored in `/public/icon_techno/` and referenced in the `iconLists` array of each project. Common icons include:
-- `/re.svg` (React)
-- `/next.svg` (Next.js)
-- `/tail.svg` (Tailwind)
-- `/ts.svg` (TypeScript)
-- `/figma.png` (Figma)
-- `/icon_techno/flutter.png`, `/icon_techno/postgresql.webp`, `/icon_techno/supabase.png`, etc.
+A `featuredWork` entry with `media: null` renders as text only — that is
+intentional, so a missing screenshot never looks like a broken page.
 
-### 3D Visualizations
+## Components
 
-The portfolio uses:
-- **Three.js** + **@react-three/fiber** + **@react-three/drei** for 3D graphics
-- **three-globe**: Interactive 3D globe visualization
-- **Framer Motion**: Advanced animations
+- `SiteHeader` — static header, hairline rule, language toggle
+- `Section` — the rule + serif heading that opens every section
+- `Hero`, `Research`, `SelectedWork`, `Methods`, `BeyondTheLab`,
+  `References`, `Footer` — the homepage, in order
+- `SignalTrace` — the hero graphic. Geometry is computed at module scope so
+  server and client render identical markup.
+- `project/ProjectArticle` — the shell every project page uses, plus the
+  `Figure` and `Gallery` helpers
 
-### Monitoring & Analytics
+## Notes
 
-- **Sentry**: Error tracking configured in `sentry.*.config.ts`
-- **Vercel Analytics** and **Speed Insights**: Performance monitoring
-
-## Styling System
-
-Tailwind CSS is used with a custom configuration:
-- Grid system: 6x6 responsive grid (see `README-typescript-concepts.md` for grid helpers)
-- Responsive breakpoints: `sm`, `md`, `lg`
-- Custom color: `text-purple` for brand accent
-- Dark mode support via `next-themes`
-
-## Important Notes
-
-- Always use `Image` from `next/image` for optimized image loading
-- Use `dynamic` import for client-only components (especially 3D components)
-- The codebase uses `'use client'` directives where needed for interactive components
-- Links between pages use Next.js `Link` or `ActiveLink` component
-- Projects are sorted by descending ID in the display, so newest projects (highest ID) appear first
+- The CV is served from `public/CV/Ludovic-Bergeron-CV.pdf`. That path is fixed:
+  updating the CV means replacing that file, not editing code.
+- Always use `Image` from `next/image`.
+- Sentry, Vercel Analytics and Speed Insights are configured and in use.

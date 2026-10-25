@@ -1,184 +1,166 @@
-
-/* app/globals.css */
+/* app/globals.css — "Signal on paper" design system */
 @import "tailwindcss";
 
-@theme {
-  /* Couleurs étendues */
-  --color-black:     #000000;
-  --color-black-100: #000319;
-  --color-black-200: oklch(0.08 0.03 250); /* par exemple */
-  --color-black-300: rgba(255,255,255,0.125);
+@custom-variant dark (&:where(.dark, .dark *));
 
-  --color-white:     #ffffff;
-  --color-white-100: #BEC1DD;
-  --color-white-200: #C1C2D3;
-
-  --color-blue-100:  #E4ECFF;
-  --color-purple:    #CBACF9;
-
-  /* Border-radius (namespace --radius-*) */
-  --radius:          0.5rem;
+/* --------------------------------------------------------------------------
+   Palette. One chromatic dark (ink navy) on cool paper, with a single accent:
+   the teal of a signal trace. Redefined under .dark so every utility follows.
+   -------------------------------------------------------------------------- */
+:root {
+  --paper:       #fafaf7;
+  --surface:     #f1f1ec;
+  --ink:         #15203a;
+  --ink-2:       #5c678a;
+  --rule:        #dee1e8;
+  --trace:       #0a6e68;
+  --trace-soft:  rgba(10, 110, 104, 0.1);
+  --trace-line:  rgba(10, 110, 104, 0.28);
 }
 
-/* spotlight CSS */
+.dark {
+  --paper:       #0b111f;
+  --surface:     #111829;
+  --ink:         #e6eaf4;
+  --ink-2:       #8e9aba;
+  --rule:        #1e2740;
+  --trace:       #58cfc3;
+  --trace-soft:  rgba(88, 207, 195, 0.12);
+  --trace-line:  rgba(88, 207, 195, 0.3);
+}
+
 @theme inline {
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --color-paper:   var(--paper);
+  --color-surface: var(--surface);
+  --color-ink:     var(--ink);
+  --color-ink-2:   var(--ink-2);
+  --color-rule:    var(--rule);
+  --color-trace:   var(--trace);
+
+  --font-sans:  var(--font-plex), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
- 
-@keyframes spotlight {
-  0% {
-    opacity: 0;
-    transform: translate(-72%, -62%) scale(0.5);
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -40%) scale(1);
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Tabular figures everywhere numbers carry meaning: dates, counts, metrics. */
+  time, .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background-color: var(--trace);
+    color: var(--paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--trace);
+    outline-offset: 3px;
+    border-radius: 1px;
   }
 }
 
-/* Border Beam Animation */
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+@layer components {
+  /* The document grid: a narrow margin column for metadata, a wide one for
+     substance. Used by every section so the page reads as one document. */
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .doc-grid {
+      grid-template-columns: 9.5rem 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .doc-grid {
+      grid-template-columns: 11.5rem 1fr;
+    }
+  }
+
+  /* Prose inside a project page. */
+  .prose-doc p {
+    max-width: 68ch;
+    margin-bottom: 1.15em;
+    color: var(--ink);
+  }
+
+  .prose-doc p:last-child {
+    margin-bottom: 0;
+  }
+
+  .prose-doc strong {
+    font-weight: 600;
+  }
+
+  .prose-doc a {
+    color: var(--trace);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
 }
-  /*  Shimmer animation for the Majicbutton  */
 
 @layer utilities {
-  @keyframes shimmer {
-    from { background-position: 0 0; }
-    to   { background-position: -200% 0; }
-  }
-  .animate-shimmer {
-    animation: shimmer 2s linear infinite;
-  }
-}
-/* Pour masquer le curseur */
-.no-caret {
-    caret-color: transparent;
-}
-
-/* Gradients X Animations */
-@theme inline {
-  --animate-first: moveVertical 30s ease infinite;
-  --animate-second: moveInCircle 20s reverse infinite;
-  --animate-third: moveInCircle 40s linear infinite;
-  --animate-fourth: moveHorizontal 40s ease infinite;
-  --animate-fifth: moveInCircle 20s ease infinite;
-
-  @keyframes moveHorizontal {
-    0% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-    50% {
-      transform: translateX(50%) translateY(10%);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-10%);
-    }
+  /* The one orchestrated moment on the page: the hero trace drawing itself. */
+  @keyframes trace-draw {
+    from { stroke-dashoffset: 1; }
+    to   { stroke-dashoffset: 0; }
   }
 
-  @keyframes moveInCircle {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .animate-trace {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: trace-draw 2.2s cubic-bezier(0.33, 0.1, 0.25, 1) 0.25s forwards;
   }
 
-  @keyframes moveVertical {
-    0% {
-      transform: translateY(-50%);
-    }
-    50% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(-50%);
-    }
+  @keyframes trace-dot {
+    from { opacity: 0; transform: scale(0.4); }
+    to   { opacity: 1; transform: scale(1); }
   }
-}
-/* Infinite Moving Cards */
 
-@theme inline {
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
-
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
+  .animate-trace-dot {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: trace-dot 0.5s ease-out 2.3s forwards;
   }
 }
 
-/*---------------*/
-@layer base {
-  :root {
-    --background:           0 0% 100%;
-    --foreground:           240 10% 3.9%;
-
-    --card:                 0 0% 100%;
-    --card-foreground:      240 10% 3.9%;
-
-    --popover:              0 0% 100%;
-    --popover-foreground:   240 10% 3.9%;
-
-    --primary:              240 5.9% 10%;
-    --primary-foreground:   0 0% 98%;
-
-    --secondary:            240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted:                240 4.8% 95.9%;
-    --muted-foreground:     240 3.8% 46.1%;
-
-    --accent:               240 4.8% 95.9%;
-    --accent-foreground:    240 5.9% 10%;
-
-    --destructive:          0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border:               240 5.9% 90%;
-    --input:                240 5.9% 90%;
-    --ring:                 240 10% 3.9%;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  .dark {
-    --background:           240 10% 3.9%;
-    --foreground:           0 0% 98%;
-
-    --card:                 240 10% 3.9%;
-    --card-foreground:      0 0% 98%;
-
-    --popover:              240 10% 3.9%;
-    --popover-foreground:   0 0% 98%;
-
-    --primary:              0 0% 98%;
-    --primary-foreground:   240 5.9% 10%;
-
-    --secondary:            240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted:                240 3.7% 15.9%;
-    --muted-foreground:     240 5% 64.9%;
-
-    --accent:               240 3.7% 15.9%;
-    --accent-foreground:    0 0% 98%;
-
-    --destructive:          0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border:               240 3.7% 15.9%;
-    --input:                240 3.7% 15.9%;
-    --ring:                 240 4.9% 83.9%;
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 
-  /* styles de base */
-  
-  button {
-    @apply active:outline-none;
+  .animate-trace {
+    stroke-dashoffset: 0;
+  }
+
+  .animate-trace-dot {
+    opacity: 1;
   }
 }

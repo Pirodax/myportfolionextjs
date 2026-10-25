@@ -1,72 +1,63 @@
-'use client'
-import React from 'react'
-import { cn } from "@/lib/utils";
-import dynamic from 'next/dynamic';
-import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa';
+'use client';
+
+import SignalTrace from './SignalTrace';
+import { hero, identity } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { translations } from '@/data/translations';
-import { TextGenerateEffectDemo } from './TextGenerateEffectDemo';
 
-interface SpotlightProps {
-  className?: string;
-  fill?: string;
-}
-const SpotlightNoSSR = dynamic<SpotlightProps>(
-  () => import('./ui/Spotlight').then((mod) => mod.Spotlight),
-  { ssr: false }
-);
+const CAPTION = {
+  en: 'Closed-loop insulin delivery: the measured signal, its target band, and the dose the controller chooses.',
+  fr: "Délivrance d'insuline en boucle fermée : le signal mesuré, sa plage cible, et la dose choisie par le contrôleur.",
+};
 
-const Hero = () => {
+export default function Hero() {
   const { language } = useLanguage();
-  const t = translations[language].hero;
+
+  const links = [
+    { label: identity.email, href: `mailto:${identity.email}` },
+    { label: 'GitHub', href: identity.github },
+    { label: 'LinkedIn', href: identity.linkedin },
+    { label: language === 'en' ? 'Curriculum vitae' : 'CV', href: identity.cv },
+  ];
 
   return (
-    <div className="mb-[100px] pt-36">
-      <div>
-        <SpotlightNoSSR className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
-        <SpotlightNoSSR className="h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
-        <SpotlightNoSSR className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
+    <div className="pt-14 pb-16 md:pt-20 md:pb-24">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-16">
+        <div>
+          <h1 className="font-serif text-[clamp(2.4rem,6.2vw,4.25rem)] font-normal leading-[1.03] tracking-[-0.025em]">
+            {hero.headline[language].map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </h1>
 
-      <div className="absolute top-0 left-0 flex h-screen w-full items-center justify-center bg-black-100">
-        <div
-          className={cn(
-            "absolute inset-0",
-            "[background-size:20px_20px]",
-            "[background-image:radial-gradient(rgba(64,64,64,0.8)_1px,transparent_1px)]",
-          )}
-        />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-black" />
-      </div>
+          <p className="mt-7 max-w-[62ch] text-ink-2">{hero.lead[language]}</p>
 
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-2xl font-bold text-center text-blue-100 max-w-80">
-            Ludovic <br /> Bergeron <br />
-          </h2>
-          <h2 className="uppercase tracking-widest text-2xl font-bold text-center text-blue-100 max-w-80">
-            {t.title}
-          </h2>
-          <TextGenerateEffectDemo />
-          <p className="text-center md:tracking-wider text-sm mb-4 md:text-lg lg:text-2xl">
-            {t.subtitle}
-          </p>
-          <MagicButton
-            title={t.cta}
-            icon={<FaLocationArrow />}
-            possition="right"
-            handleclick={() => {
-              const target = document.getElementById("projects");
-              if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          />
+          <p className="mt-4 max-w-[62ch] text-ink">{hero.seeking[language]}</p>
+
+          <ul className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.95rem]">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                  className="text-ink underline decoration-rule decoration-1 underline-offset-[0.3em] transition-colors hover:text-trace hover:decoration-trace"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
+
+        <figure className="lg:pt-2">
+          <SignalTrace className="w-full max-w-sm lg:max-w-none" />
+          <figcaption className="mt-4 max-w-[38ch] text-sm leading-relaxed text-ink-2">
+            {CAPTION[language]}
+          </figcaption>
+        </figure>
       </div>
     </div>
-  )
+  );
 }
-
-export default Hero

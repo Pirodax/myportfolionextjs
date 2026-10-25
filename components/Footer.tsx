@@ -1,58 +1,67 @@
-'use client'
-import React from 'react'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa6'
-import { socialMedia } from '@/data'
-import Image from 'next/image'
-import { useLanguage } from '@/contexts/LanguageContext'
-import { translations } from '@/data/translations'
+'use client';
 
-const Footer = () => {
+import { identity, socialMedia } from '@/data';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+const COPY = {
+  en: {
+    title: 'Get in touch',
+    body: 'If any of this overlaps with what your group is working on, write to me. Email reaches me fastest, and I answer every message.',
+    cv: 'Curriculum vitae (PDF)',
+  },
+  fr: {
+    title: 'Me contacter',
+    body: "Si quelque chose ici recoupe les travaux de votre équipe, écrivez-moi. L'e-mail est le plus direct, et je réponds à tous les messages.",
+    cv: 'Curriculum vitae (PDF)',
+  },
+};
+
+export default function Footer() {
   const { language } = useLanguage();
-  const t = translations[language].footer;
+  const copy = COPY[language];
 
   return (
-    <footer className="w-full pb-10 mb-[100px] py-20 md:mb-5" id="contact">
-      <div className="w-full pb-10 flex flex-col items-center">
-        <h1 className="heading text-3xl md:text-5xl font-bold text-center">
-          {t.heading}
-          <span className="text-purple"> {t.headingSpan} </span>
-          {language === 'fr' ? "lors d'un entretien" : "in an interview"}
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center text-xl">
-          {t.quote}
-        </p>
-        <a href="mailto:bergeron@et.esiea.fr">
-          <MagicButton title={t.cta} icon={<FaLocationArrow />} possition='rigth' />
-        </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2026  Bergeron Ludovic
-        </p>
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((profile) => (
-            <div
-              key={profile.id}
-              className="w-15 h-15 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+    <footer id="contact" className="border-t border-rule pt-7 md:pt-9">
+      <h2 className="font-serif text-[1.6rem] leading-tight tracking-tight md:text-[2rem]">
+        {copy.title}
+      </h2>
+
+      <p className="mt-3 max-w-[58ch] text-ink-2">{copy.body}</p>
+
+      <a
+        href={`mailto:${identity.email}`}
+        className="mt-7 inline-block font-serif text-[clamp(1.4rem,3.6vw,2.1rem)] tracking-tight text-ink underline decoration-rule decoration-1 underline-offset-[0.22em] transition-colors hover:text-trace hover:decoration-trace"
+      >
+        {identity.email}
+      </a>
+
+      <ul className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.95rem]">
+        {socialMedia.map((profile) => (
+          <li key={profile.id}>
+            <a
+              href={profile.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-ink underline decoration-rule decoration-1 underline-offset-[0.3em] transition-colors hover:text-trace hover:decoration-trace"
             >
-              <a href={profile.link} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center">
-                <button className="w-full h-full flex items-center justify-center">
-                  <Image
-                    src={profile.img}
-                    alt={profile.id.toString()}
-                    width={64}
-                    height={64}
-                    className="w-2/3 h-2/3 object-contain"
-                  />
-                </button>
-              </a>
-            </div>
-          ))}
-        </div>
+              {profile.name}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a
+            href={identity.cv}
+            className="text-ink underline decoration-rule decoration-1 underline-offset-[0.3em] transition-colors hover:text-trace hover:decoration-trace"
+          >
+            {copy.cv}
+          </a>
+        </li>
+      </ul>
+
+      <div className="mt-16 flex flex-wrap justify-between gap-2 border-t border-rule pt-5 text-sm text-ink-2">
+        <p>© {new Date().getFullYear()} Ludovic Bergeron</p>
+        <p>{identity.location[language]}</p>
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer
