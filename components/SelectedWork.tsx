@@ -87,10 +87,11 @@ export default function SelectedWork() {
                     </video>
                   ) : (
                     <Image
-                      src={entry.media.src}
+                      src={pick(entry.media.src, language)}
                       alt={pick(entry.title, language)}
-                      width={1600}
-                      height={900}
+                      width={3840}
+                      height={1646}
+                      sizes="(min-width: 1024px) 46rem, 100vw"
                       className="block h-auto w-full"
                     />
                   )}

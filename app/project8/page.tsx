@@ -2,7 +2,7 @@
 
 import ProjectArticle from '@/components/project/ProjectArticle';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
-import { SIGN2SPEAK_VIDEO, SIGN2SPEAK_WRITEUP } from '@/data';
+import { SIGN2SPEAK_REPO, SIGN2SPEAK_VIDEO, SIGN2SPEAK_WRITEUP } from '@/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 /* For still images, drop them in /public/Projet_Sign2Speak/ and render them
@@ -31,6 +31,7 @@ const t = {
     stack: 'Keras, MediaPipe, TFLite / LiteRT, Gemma 4 E2B, Android',
     demo: 'The full pipeline running on the phone: camera, landmarks, classifier, Gemma, speech.',
     writeup: 'Kaggle write-up',
+    repo: 'Source code on GitHub',
   },
   fr: {
     subtitle:
@@ -54,6 +55,7 @@ const t = {
     stack: 'Keras, MediaPipe, TFLite / LiteRT, Gemma 4 E2B, Android',
     demo: "Le pipeline complet sur le téléphone : caméra, points de repère, classifieur, Gemma, voix.",
     writeup: 'Write-up Kaggle',
+    repo: 'Code source sur GitHub',
   },
 };
 
@@ -73,6 +75,7 @@ export default function Project8() {
       ]}
       links={[
         { label: { en: text.writeup, fr: text.writeup }, href: SIGN2SPEAK_WRITEUP },
+        { label: { en: text.repo, fr: text.repo }, href: SIGN2SPEAK_REPO },
       ]}
     >
       <YouTubeEmbed

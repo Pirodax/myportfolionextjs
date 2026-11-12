@@ -27,8 +27,8 @@ export const navItems = [
 
 export const hero = {
   headline: {
-    en: ["Machine learning", "that has to hold up", "outside the lab."],
-    fr: ["Des modèles qui doivent", "tenir debout", "hors du laboratoire."],
+    en: ["Making ML models", "explainable enough", "to trust."],
+    fr: ["Rendre les modèles de ML", "assez explicables", "pour qu'on leur fasse confiance."],
   },
   lead: {
     en: "I'm Ludovic Bergeron, a final-year engineering student at ESIEA (MSc level, AI & Data Science) and a student researcher at esiealab, where I work on making deep reinforcement learning controllers for type 1 diabetes explainable enough to reach a clinic. Before that I ran an open-ended applied research project at the AI Factory of Christian Dior Couture, on product similarity for recommendation.",
@@ -128,7 +128,7 @@ export type WorkEntry = {
   detail: Bilingual;
   stack: string[];
   media:
-    | { type: "image"; src: string }
+    | { type: "image"; src: string | Bilingual }
     | { type: "video"; src: string; poster?: string }
     | { type: "youtube"; id: string }
     | null;
@@ -138,6 +138,8 @@ export type WorkEntry = {
 export const SIGN2SPEAK_VIDEO = "iZyHT8b3G_g";
 export const SIGN2SPEAK_WRITEUP =
   "https://www.kaggle.com/competitions/gemma-4-good-hackathon/writeups/sign2speak";
+export const SIGN2SPEAK_REPO =
+  "https://github.com/Pirodax/Sign2Speak-GEMMA-4-GOOD-HACKATHON";
 
 export const featuredWork: WorkEntry[] = [
   {
@@ -164,6 +166,10 @@ export const featuredWork: WorkEntry[] = [
         label: { en: "Kaggle write-up", fr: "Write-up Kaggle" },
         href: SIGN2SPEAK_WRITEUP,
       },
+      {
+        label: { en: "Source code on GitHub", fr: "Code source sur GitHub" },
+        href: SIGN2SPEAK_REPO,
+      },
     ],
   },
   {
@@ -171,8 +177,8 @@ export const featuredWork: WorkEntry[] = [
     href: "/project9",
     period: { en: "Sep 2025 — present", fr: "Sept. 2025 — aujourd'hui" },
     context: {
-      en: "Shipping to the App Store and Google Play",
-      fr: "Bientôt sur l'App Store et Google Play",
+      en: "On the App Store, Android coming soon to Google Play",
+      fr: "Sur l'App Store, bientôt sur Google Play pour Android",
     },
     title: "Loodo",
     summary: {
@@ -180,11 +186,17 @@ export const featuredWork: WorkEntry[] = [
       fr: "Une application de productivité sociale — un Strava du travail — dont l'agent de coaching IA exécute de vraies actions dans l'app, au lieu d'en parler.",
     },
     detail: {
-      en: "The coaching agent is prompt-engineered on top of an LLM API and wired to the app's own actions, so advice and execution are the same gesture. I also prototyped an on-device coach by fine-tuning Mistral 7B with QLoRA (Unsloth), to see how far the experience survives without a network call. The app runs on Flutter over Supabase.",
-      fr: "L'agent de coaching repose sur une API de LLM, avec un prompt travaillé, et il est câblé aux actions de l'application : le conseil et son exécution sont le même geste. J'ai aussi prototypé un coach embarqué en affinant Mistral 7B par QLoRA (Unsloth), pour voir jusqu'où l'expérience survit sans appel réseau. L'application tourne sous Flutter au-dessus de Supabase.",
+      en: "Loodo AI is a planning assistant running on Mistral through tool calling: instead of answering with advice, it calls the app's own operations to create goals and tasks, tick them off and read your progress. I also prototyped an on-device coach by fine-tuning Mistral 7B with QLoRA (Unsloth), to see how much of the experience survives without a network call. One Flutter codebase runs on iPhone, Android and the web, backed by Supabase.",
+      fr: "Loodo AI est un assistant de planification qui s'appuie sur Mistral par appel d'outils : au lieu de répondre par des conseils, il appelle les opérations de l'application pour créer objectifs et tâches, les cocher et lire votre progression. J'ai aussi prototypé un coach embarqué en affinant Mistral 7B par QLoRA (Unsloth), pour voir quelle part de l'expérience survit sans appel réseau. Une seule base Flutter tourne sur iPhone, Android et le web, adossée à Supabase.",
     },
-    stack: ["Flutter", "Supabase", "LLM agent", "QLoRA / Unsloth"],
-    media: null,
+    stack: ["Flutter", "Supabase", "Mistral (tool calling)", "QLoRA / Unsloth"],
+    media: {
+      type: "image",
+      src: {
+        en: "/Projet_Loodo/loodo-banner-en.png",
+        fr: "/Projet_Loodo/loodo-banner-fr.png",
+      },
+    },
     links: [
       { label: { en: "loodo.app", fr: "loodo.app" }, href: "https://loodo.app" },
     ],
@@ -192,7 +204,7 @@ export const featuredWork: WorkEntry[] = [
   {
     id: 10,
     href: "/project10",
-    period: { en: "Sep 2025 — present", fr: "Sept. 2025 — aujourd'hui" },
+    period: { en: "Sep 2025 — Sep 2026", fr: "Sept. 2025 — Sept. 2026" },
     context: {
       en: "Team project on a de-identified oncology cohort",
       fr: "Projet d'équipe sur une cohorte d'oncologie anonymisée",
@@ -369,8 +381,8 @@ export const testimonials = [
     } as Bilingual,
     name: "Antoine Leblanc",
     title: {
-      fr: "Ingénieur en intelligence artificielle et enseignant à l'ESIEA",
-      en: "Artificial intelligence engineer and lecturer at ESIEA",
+      fr: "Doctorant en XAI pour la cybersécurité et enseignant à l'ESIEA",
+      en: "PhD student in XAI for cybersecurity and lecturer at ESIEA",
     } as Bilingual,
     img: "/pp_Antoine_LEBLANC.jpg",
   },
